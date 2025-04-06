@@ -1,0 +1,32 @@
+/* menu display */
+.menu {
+    display: inline-block;
+}
+
+/* navigation list style */
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    padding:0.2em 0.6em;
+   } 
+  
+
+/* Color for hyperlinks */
+a {
+    color: black;
+  }
+
+/* footer formatting */
+footer {
+    border-top: 4px black;
+    clear: both;
+    text-align: center;
+}
+
+footer p {
+    display: inline-block;
+    width: 33%;
+}
