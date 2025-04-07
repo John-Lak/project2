@@ -12,8 +12,8 @@
 
 <body>
     <header>
-        <h1>Company</h1>
-      </header>
+      <img src="images/logo.jpg" alt="Logo of JLNV">
+    </header>
     
       <nav>
         <p class="menu"><a href="index.html">Home Page</a></p> 
@@ -21,11 +21,121 @@
         <p class="menu"><a href="apply.html">Apply Page</a></p> 
         <p class="menu"><a href="about.html">About Page</a></p>
       </nav>
-      
-    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php"></form>
+    
+    <header>
+      <h1>Job Application</h1>
+    </header>
+    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+      <!-- Select the job reference from dropdown menu -->
+    <p>
+      <label for="job ref no.">Job reference Number</label>
+      <select name="job ref no." id="job ref no.">
+            <option value="select">Select</option>
+            <option value="1684654" required="required">1684654</option>
+            <option value="4968465" required="required">4968465</option>
+            <option value="4865621" required="required">4865621</option>
+            <option value="1654684" required="required">1654684</option>
+            <option value="1684652" required="required">1684652</option>
+            <option value="1385435" required="required">1385435</option>
+      </select>
+    </p>
+
+      <!-- First name and last name -->
+    <p>
+      <label for="first">First Name</label>
+      <input type="text" name="fn" id="name" placeholder="First Name" required="required" maxlength="20" pattern="[A-Za-z]+">
+    </p>
+    <p>
+      <label for="last">Last Name</label> 
+      <input type="text" name="ln" id="name" placeholder="Last Name" required="required" maxlength="20" pattern="[A-Za-z]+">
+    </p>
+
+      <!-- Date of Birth -->
+    <p>
+      <label for="dob">Date of Birth</label> 
+      <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required="required">
+    </p>
+
+      <!-- Select one of the radios for gender -->
+    <p>
+      <input type="radio" id="male" name="gender" value="male" required="required">
+      <label for="male">Male</label>
+    </p>
+    <p>
+      <input type="radio" id="female" name="gender" value="female" required="required">
+      <label for="female">Female</label>
+    </p>
+
+    <!-- Address and Suburb/Town -->
+    <p>
+      <label for="street">Street Address</label>
+      <input type="text" name="sd" id="address" required="required" maxlength="40">
+    </p>
+    <p>
+      <label for="suburb">Suburb/Town</label> 
+      <input type="text" name="st" id="suburb" required="required" maxlength="40">
+    </p>
+
+    <!-- Select the state from dropdown menu -->
+    <p>
+      <label for="reference">State </label>
+      <select name="reference" id="state">
+            <option value="">State</option>
+            <option value="vic" required="required">VIC</option>
+            <option value="nsw" required="required">NSW</option>
+            <option value="qld" required="required">QLD</option>
+            <option value="nt" required="required">NT</option>
+            <option value="wa" required="required">WA</option>
+            <option value="sa" required="required">SA</option>
+            <option value="tas" required="required">TAS</option>
+            <option value="act" required="required">ACT</option>
+        </select>
+    </p>
+
+    <!-- Postcode -->
+    <p>
+      <label for="postcode">Postcode</label>
+      <input type="text" name="pc" id="postcode" placeholder="Postcode" required="required" maxlength="4" pattern="\d{4}">
+    </p>
+
+    <!-- Email Address -->
+    <p>
+      <label for="address">Email Address</label>
+      <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required="required">
+    </p>
+
+     <!-- Required Technical Skills -->
+    <p>
+      <input type="checkbox" id="ts1" name="category[]" value="ts1" checked="checked">
+      <label for="ts1">Technical Skill 1</label> 
+  &nbsp;
+    <input type="checkbox" id="ts2" name="category[]" value="ts2">
+    <label for="ts2">Technical Skill 2</label>  
+  &nbsp;
+    <input type="checkbox" id="ts3" name="category[]" value="ts3">
+    <label for="ts3">Technical Skill 3</label>
+  &nbsp;
+    <input type="checkbox" id="ts4" name="category[]" value="ts4">
+    <label for="ts4">Technical Skill 4</label>
+  &nbsp; 
+    <input type="checkbox" id="ts5" name="category[]" value="ts5">
+    <label for="ts5">Technical Skill 5</label>
+    </p>
+
+    <!-- Write a comment on the other skills -->
+    <p>
+      <label for="issue">Other Skills</label>
+    </p>
+    <p>
+      <textarea id="issue" name="issue" rows="4" placeholder="Write description of your problem here..." cols="40" required="required"></textarea>
+    </p>
+
+    <!-- Submission of job application -->
+      <input type="submit" value="Submit">
+  </form>
 
   <footer>
-    <p><a href="mailto:info@companyname.com.au"> Email</a></p>
+    <p><a href="mailto:info@companyname.com.au">info@companyname.com.au</a></p>
     <p><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" title="Jira Project" target="_blank"> Jira Project </a></p>
   </footer>
 </body>
