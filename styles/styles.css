@@ -1,11 +1,28 @@
 /* header */
 
+img{
+    width: 150px;
+}
+
+
+/* body menu */ 
+body{
+    background-color: #002B46;
+    color: white;
+}
+
+
 /* menu display */
 .menu {
     display: inline-block;
 }
 
 /* navigation list style */
+
+#border{
+    color: orange;
+}
+
 nav ul {
     list-style: none;
 }
@@ -13,16 +30,35 @@ nav ul {
 nav a {
     text-decoration: none;
     padding:0.2em 0.6em;
+    color: white;
    } 
 
 /* Color for hyperlinks */
 a {
     color: black;
   }
+/* Article fortmatting */
+article{
+    text-align: left;
+}
+
+/*table formatting*/
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 20%;
+  }
+  
 
 /* footer formatting */
 footer {
     border-top: 1px solid black;
+
     clear: both;
     text-align: center;
 }
@@ -31,3 +67,4 @@ footer p {
     display: inline-block;
     width: 33%;
 }
+
