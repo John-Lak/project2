@@ -12,7 +12,7 @@
 
 <body>
     <header>
-      <img src="images/logo.jpg" alt="Logo of JLNV">
+      <img src="images/logo_newer.png" alt="Logo of JLNV">
     </header>
     
       <nav>
@@ -20,19 +20,20 @@
         <p class="menu"><a href="jobs.html">Jobs Page</a></p> 
         <p class="menu"><a href="apply.html">Apply Page</a></p> 
         <p class="menu"><a href="about.html">About Page</a></p>
+        <hr id="border">
       </nav>
-    
+      
     <header>
       <h1>Job Application</h1>
     </header>
     <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
       <!-- Select the job reference from dropdown menu -->
     <p>
-      <label for="job ref no.">Job reference Number</label>
+      <label for="job ref no.">Job reference Number: </label>
       <select name="job ref no." id="job ref no.">
             <option value="select">Select</option>
-            <option value="1684654" required="required">1684654</option>
-            <option value="4968465" required="required">4968465</option>
+            <option value="ar001" required="required">AR001</option>
+            <option value="nt027" required="required">NT027</option>
             <option value="4865621" required="required">4865621</option>
             <option value="1654684" required="required">1654684</option>
             <option value="1684652" required="required">1684652</option>
@@ -42,43 +43,42 @@
 
       <!-- First name and last name -->
     <p>
-      <label for="first">First Name</label>
+      <label for="first">First Name: </label>
       <input type="text" name="fn" id="name" placeholder="First Name" required="required" maxlength="20" pattern="[A-Za-z]+">
     </p>
     <p>
-      <label for="last">Last Name</label> 
+      <label for="last">Last Name:</label> 
       <input type="text" name="ln" id="name" placeholder="Last Name" required="required" maxlength="20" pattern="[A-Za-z]+">
     </p>
 
       <!-- Date of Birth -->
     <p>
-      <label for="dob">Date of Birth</label> 
+      <label for="dob">Date of Birth: </label> 
       <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required="required">
     </p>
 
       <!-- Select one of the radios for gender -->
     <p>
-      <input type="radio" id="male" name="gender" value="male" required="required">
-      <label for="male">Male</label>
-    </p>
-    <p>
-      <input type="radio" id="female" name="gender" value="female" required="required">
-      <label for="female">Female</label>
+      <label>Gender: </label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
     </p>
 
     <!-- Address and Suburb/Town -->
     <p>
-      <label for="street">Street Address</label>
+      <label for="street">Street Address: </label>
       <input type="text" name="sd" id="address" required="required" maxlength="40">
     </p>
     <p>
-      <label for="suburb">Suburb/Town</label> 
+      <label for="suburb">Suburb/Town: </label> 
       <input type="text" name="st" id="suburb" required="required" maxlength="40">
     </p>
 
     <!-- Select the state from dropdown menu -->
     <p>
-      <label for="reference">State </label>
+      <label for="reference">State: </label>
       <select name="reference" id="state">
             <option value="">State</option>
             <option value="vic" required="required">VIC</option>
@@ -94,18 +94,19 @@
 
     <!-- Postcode -->
     <p>
-      <label for="postcode">Postcode</label>
+      <label for="postcode">Postcode: </label>
       <input type="text" name="pc" id="postcode" placeholder="Postcode" required="required" maxlength="4" pattern="\d{4}">
     </p>
 
     <!-- Email Address -->
     <p>
-      <label for="address">Email Address</label>
+      <label for="address">Email Address: </label>
       <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required="required">
     </p>
 
      <!-- Required Technical Skills -->
     <p>
+    <label>Required Technical Skills: </label>
       <input type="checkbox" id="ts1" name="category[]" value="ts1" checked="checked">
       <label for="ts1">Technical Skill 1</label> 
   &nbsp;
@@ -124,10 +125,10 @@
 
     <!-- Write a comment on the other skills -->
     <p>
-      <label for="issue">Other Skills</label>
+      <label for="issue">Other Skills:</label>
     </p>
     <p>
-      <textarea id="issue" name="issue" rows="4" placeholder="Write description of your problem here..." cols="40" required="required"></textarea>
+      <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40" required="required"></textarea>
     </p>
 
     <!-- Submission of job application -->
@@ -135,7 +136,6 @@
   </form>
 
   <footer>
-    <p><a href="mailto:info@companyname.com.au">info@companyname.com.au</a></p>
     <p><a href="mailto:info@companyname.com.au">info@companyname.com.au</a></p>
     <p><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" title="Jira Project" target="_blank"> Jira Project </a></p>
   </footer>
