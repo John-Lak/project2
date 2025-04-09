@@ -67,11 +67,17 @@ article{
 
 #title_index{
   text-align: center;
+  font-size: 38px;
+}
+#sub_context{
+  text-align: left;
+  font-size: 38px;
 }
 
 p {
-  line-height: 2.5;
+  line-height: 2.0;
   font-size: 1.1em;
+  font-size: 20px;
 }
 
 table {
@@ -101,6 +107,7 @@ table {
     max-width: 10000px;
     line-height: 2;
     font-size: 1.1em;
+    font-size: 20px;
   
    
    
