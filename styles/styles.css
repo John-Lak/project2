@@ -1,153 +1,158 @@
-/* header */
-img{
-    width: 150px;
+/*  Header Styling  */
+img {
+  width: 150px;
 }
 
-
-/* body menu */ 
-body{
-    background-color: #002B46;
-    color: white;
-    font-family: 'Times New Roman', Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+/*  Body Styling  */
+body {
+  background-color: #002B46;
+  color: white;
+  font-family: 'Times New Roman', Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
 }
 
-/* menu display/navigation page */
+/*  Menu Display / Navigation Section  */
 .menu {
-    display: inline-block;
-    padding: 0px 50px;
+  display: inline-block;
+  padding: 0px 50px;
 }
 
+/* Styles individual navigation links inside the menu */
 nav .menu a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    background-color: #003a5d;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #003a5d;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
 }
+
+/* Changes background color on hover for menu links */
 nav .menu a:hover {
-    background-color: #5ecdf8;
+  background-color: #5ecdf8;
 }
 
+/* Resets background color when a menu link is active (clicked) */
 nav .menu a:active {
-    background-color: #003a5d;
+  background-color: #003a5d;
 }
 
+/* Removes bullet points from unordered list in nav */
 nav ul {
-    list-style: none;
+  list-style: none;
 }
 
+/* Sets default style for all navigation links */
 nav a {
-    text-decoration: none;
-    padding:0.2em 0.6em;
-    color: white;
-   } 
-
-#border {
-      color: orange;
-      border: 1.5px solid orange;
+  text-decoration: none;
+  padding: 0.2em 0.6em;
+  color: white;
 }
 
-/* Color for hyperlinks */
+/* Adds orange color and border */
+#border {
+  color: orange;
+  border: 1.5px solid orange;
+}
+
+/*  Hyperlink Styling  */
 a {
-    color: white;
-  }
+  color: white;
+}
 
-/*table formatting*/
+/*  Table Styling  */
 th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-  table {
-    border-collapse: collapse;
-    width: 20%;
-  }
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
 
+/* Styles table to collapse borders and use full width */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-/* index.html formatting */
-
-
-
-/* main menu for index.html */
+/*  Main Menu Content Area  */
 .content {
   max-width: 1150px;
   margin: 40px auto;
   padding: 0 50px;
 }
 
-/* Article fortmatting for index.html*/
-article{
+/*  Article Formatting  */
+article {
   text-align: left;
 }
 
-#title_index{
+/*  Title Styling for index.html  */
+#title_index {
   text-align: center;
   font-size: 38px;
 }
-#sub_context{
+
+/* Left aligns sub-context text with same large font size */
+#sub_context {
   text-align: left;
   font-size: 38px;
 }
 
+/* Styles paragraphs for better readability */
 p {
   line-height: 2.0;
   font-size: 1.1em;
   font-size: 20px;
 }
 
-table {
-    border-collapse: collapse;
-    width: 20%;
-  }
-
+/* Changes background color on hover for job-related elements */
 .job:hover {
-    background-color: #48b8df;
-  }
-
-/* AI generated picture */
-.prompt{
-    width: 300%;
-    max-width: 1100px;
-    margin: 30px 0;
-    border-radius: 10px;
-  }
-
-/* tick box */
-
-.index-bullets{
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    margin: 0 auto 30px;
-    max-width: 10000px;
-    line-height: 2;
-    font-size: 1.1em;
-    font-size: 20px;
+  background-color: #48b8df;
 }
+
+/*  AI-Generated Picture Display  */
+.prompt {
+  width: 300%;
+  max-width: 1100px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+/*  Tick Box (Checklist) Styling  */
+.index-bullets {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  margin: 0 auto 30px;
+  max-width: 10000px;
+  line-height: 2;
+  font-size: 1.1em;
+  font-size: 20px;
+}
+
+/* Adds a checkmark icon before each checklist item */
 .index-bullets li::before {
-    content: '✔';
-    color: #5ecdf8;
-    margin-right: 10px;
-    
-  }
+  content: '✔';
+  color: #5ecdf8;
+  margin-right: 10px;
+}
 
-  /* view open jobs menu */
-
+/*  View Open Jobs Menu, Styles job buttons  */
 .job {
   background-color: #5ecdf8;
   color: #003a5d;
-  padding: 12px 0px ;
+  padding: 12px 0px;
   text-decoration: none;
   border-radius: 6px;
-  font-weight:bold;
-  display:inline-block;
+  font-weight: bold;
+  display: inline-block;
 }
 
+/* Styles job info boxes with border, shadow, padding, and layout */
 .job-box {
   border: 2px solid #5ecdf8;
   border-radius: 10px;
@@ -158,10 +163,12 @@ table {
   flex: 1 1 45%;
 }
 
+/* Adds margin to bullet points inside job boxes */
 .job-bullets {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
+/* Arranges job boxes in a flexible, centered, and wrapped layout */
 .job-container {
   display: flex;
   gap: 20px;
@@ -169,15 +176,24 @@ table {
   flex-wrap: wrap;
 }
 
-/* footer formatting */
+/*  About Section List  */
+.about-bullets {
+  padding-left: 20px;
+}
+
+/* Adds spacing between list items in about section */
+.about-bullets li {
+  margin-bottom: 8px;
+}
+
+/*  Footer Styling  */
 footer {
-    border-top: 2px solid orange;
-    clear: both;
-    text-align: center;
+  border-top: 2px solid orange;
+  clear: both;
+  text-align: center;
 }
 
 footer p {
-    display: inline-block;
-    width: 33%;
+  display: inline-block;
+  width: 33%;
 }
-
