@@ -89,7 +89,7 @@ table {
 
 /*  Article Formatting  */
 article {
-  text-align: left;
+  text-align:left;
 }
 
 /*  Title Styling for index.html  */
@@ -118,20 +118,48 @@ p {
 
 /*  AI-Generated Picture Display, index prompt  */
 .prompt {
-  width: 300%;
-  max-width: 1100px;
+  width: 500%;
+  max-width: 1150px;
   margin: 30px 0;
   border-radius: 10px;
 }
 
-/*  AI-Generated Picture Display, jobs prompt */
-
-.job_prompt{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
+/*  Student ID */
+.student-id {
+  float: right;
+  font-weight: bold;
+  color: white;
 }
+
+/* Center the table */
+.info-table {
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
+  text-align: center;
+}
+/* Table styling for th */
+.info-table th {
+  font-weight: bold;
+  background-color: #003366;
+}
+/* Table styling for td */
+.info-table td {
+  background-color: #003370; /* Light blue using hex */
+  padding: 10px;
+  border: 1px solid #003400;
+}
+
+/* Making the logo and the "Members interest" centered"*/
+figure{
+  text-align: center;
+}
+
+/* Hover effect for table cells */
+.info-table td:hover {
+  background-color: #003360; 
+}
+
 
 
 /*  Tick Box (Checklist) Styling  */
