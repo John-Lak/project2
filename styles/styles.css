@@ -67,7 +67,7 @@ a {
 th, td {
   border: 1px solid black;
   padding: 8px;
-  text-align: left;
+  text-align: center;
 }
 
 /* Styles table to collapse borders and use full width */
@@ -76,6 +76,8 @@ table {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  margin: 0%;
+  
 }
 
 /*  Main Menu Content Area  */
@@ -114,13 +116,23 @@ p {
   background-color: #48b8df;
 }
 
-/*  AI-Generated Picture Display  */
+/*  AI-Generated Picture Display, index prompt  */
 .prompt {
   width: 300%;
   max-width: 1100px;
   margin: 30px 0;
   border-radius: 10px;
 }
+
+/*  AI-Generated Picture Display, jobs prompt */
+
+.job_prompt{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
 
 /*  Tick Box (Checklist) Styling  */
 .index-bullets {
@@ -164,8 +176,10 @@ p {
 }
 
 /* Adds margin to bullet points inside job boxes */
-.job-bullets {
-  margin-left: 20px;
+.jobs-bullets {
+  text-align: center;
+  list-style: none;
+  line-height: 2.0;
 }
 
 /* Arranges job boxes in a flexible, centered, and wrapped layout */
@@ -179,6 +193,8 @@ p {
 /*  About Section List  */
 .about-bullets {
   padding-left: 20px;
+  text-align: center;
+  list-style-type: none;
 }
 
 /* Adds spacing between list items in about section */
