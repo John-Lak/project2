@@ -27,7 +27,6 @@ nav .menu a {
   background-color: #003a5d;
   border-radius: 5px;
   margin-bottom: 10px;
-  transition: background-color 0.3s ease;
 }
 
 /* Changes background color on hover for menu links */
@@ -67,7 +66,7 @@ a {
 th, td {
   border: 1px solid black;
   padding: 8px;
-  text-align: center;
+  text-align: left;
 }
 
 /* Styles table to collapse borders and use full width */
@@ -76,8 +75,6 @@ table {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  margin: 0%;
-  
 }
 
 /*  Main Menu Content Area  */
@@ -89,7 +86,7 @@ table {
 
 /*  Article Formatting  */
 article {
-  text-align:left;
+  text-align: left;
 }
 
 /*  Title Styling for index.html  */
@@ -116,51 +113,13 @@ p {
   background-color: #48b8df;
 }
 
-/*  AI-Generated Picture Display, index prompt  */
+/*  AI-Generated Picture Display  */
 .prompt {
-  width: 500%;
-  max-width: 1150px;
+  width: 300%;
+  max-width: 1100px;
   margin: 30px 0;
   border-radius: 10px;
 }
-
-/*  Student ID */
-.student-id {
-  float: right;
-  font-weight: bold;
-  color: white;
-}
-
-/* Center the table */
-.info-table {
-  margin: 0 auto;
-  width: 80%;
-  border-collapse: collapse;
-  text-align: center;
-}
-/* Table styling for th */
-.info-table th {
-  font-weight: bold;
-  background-color: #003366;
-}
-/* Table styling for td */
-.info-table td {
-  background-color: #003370; /* Light blue using hex */
-  padding: 10px;
-  border: 1px solid #003400;
-}
-
-/* Making the logo and the "Members interest" centered"*/
-figure{
-  text-align: center;
-}
-
-/* Hover effect for table cells */
-.info-table td:hover {
-  background-color: #003360; 
-}
-
-
 
 /*  Tick Box (Checklist) Styling  */
 .index-bullets {
@@ -204,10 +163,8 @@ figure{
 }
 
 /* Adds margin to bullet points inside job boxes */
-.jobs-bullets {
-  text-align: center;
-  list-style: none;
-  line-height: 2.0;
+.job-bullets {
+  margin-left: 20px;
 }
 
 /* Arranges job boxes in a flexible, centered, and wrapped layout */
@@ -221,8 +178,6 @@ figure{
 /*  About Section List  */
 .about-bullets {
   padding-left: 20px;
-  text-align: center;
-  list-style-type: none;
 }
 
 /* Adds spacing between list items in about section */
