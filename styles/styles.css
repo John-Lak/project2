@@ -77,13 +77,6 @@ table {
   overflow: hidden;
 }
 
-/*  Main Menu Content Area  */
-.content {
-  max-width: 1150px;
-  margin: 40px auto;
-  padding: 0 50px;
-}
-
 /*  Article Formatting  */
 article {
   text-align: left;
@@ -159,15 +152,6 @@ p {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   flex: 1 1 45%;
 }
-.all-box {
-  border: 2px solid #5ecdf8;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
-  background-color: #003a5d;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  flex: 1 1 45%;
-}
 
 /* Adds margin to bullet points inside job boxes */
 .jobs-bullets {
@@ -182,6 +166,60 @@ p {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.index-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* Optional: limits max width */
+  margin: 0 auto;     /* Center it horizontally */
+}
+
+.index-box {
+  border: 2px solid #5ecdf8;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #003a5d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* First box: full width */
+.index-box:nth-child(1) {
+  flex: 1 1 100%;
+}
+
+/* Second and third boxes: side by side */
+.index-box:nth-child(2),
+.index-box:nth-child(3) {
+  flex: 1 1 calc(50% - 10px); /* Half width minus gap */
+  min-width: 300px; /* For responsive wrapping */
+}
+
+/* Styles job info boxes with border, shadow, padding, and layout */
+.apply-box {
+  border: 2px solid #5ecdf8;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #003a5d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 45%;
+}
+
+/* Styles job info boxes with border, shadow, padding, and layout */
+.about-box {
+  border: 2px solid #5ecdf8;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #003a5d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 45%;
 }
 
 /*  About Section List  */
