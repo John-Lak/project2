@@ -99,7 +99,7 @@ article {
 /* Styles paragraphs for better readability */
 p {
   line-height: 2.0;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 /* Changes background color on hover for job-related elements */
@@ -117,10 +117,12 @@ p {
 
 .prompt2{
   float:right;
-  margin-top: -300px;
-  width: 35%;
+  width: 34%;
 }
 
+.special{
+  color:red;
+}
 
 
 /*  Tick Box (Checklist) Styling  */
@@ -131,7 +133,7 @@ p {
   margin: 0 auto 30px;
   max-width: 10000px;
   line-height: 2;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 /* Adds a checkmark icon before each checklist item */
@@ -150,6 +152,7 @@ p {
   border-radius: 6px;
   font-weight: bold;
   display: inline-block;
+  font-size: 25px;
 }
 
 /* Styles job info boxes with border, shadow, padding, and layout */
