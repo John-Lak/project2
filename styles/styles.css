@@ -27,6 +27,7 @@ nav .menu a {
   background-color: #003a5d;
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 /* Changes background color on hover for menu links */
@@ -55,6 +56,7 @@ nav a {
 #border {
   color: orange;
   border: 1.5px solid orange;
+  margin-bottom: 30px;
 }
 
 /*  Hyperlink Styling  */
@@ -113,6 +115,14 @@ p {
   border-radius: 10px;
 }
 
+.prompt2{
+  float:right;
+  margin-top: -300px;
+  width: 35%;
+}
+
+
+
 /*  Tick Box (Checklist) Styling  */
 .index-bullets {
   list-style-type: none;
@@ -135,7 +145,7 @@ p {
 .job {
   background-color: #5ecdf8;
   color: #003a5d;
-  padding: 12px 0px;
+  padding: 12px 18px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
@@ -238,14 +248,61 @@ figure{
   text-align: center;
 }
 
+
+
+/* Student IDs aligned to the right */
+.student-id {
+  float: right;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Image with border, floated right */
+.team-photo img {
+  border: 3px solid #004080; /* Blue border using shorthand */
+  float: right;
+  margin: 10px;
+  width: 200px;
+}
+
+/* Center the table */
+.info-table {
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Table styling */
+.info-table th {
+  font-weight: bold;
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+}
+
+.info-table td {
+  background-color:#003a5d; /* Light blue using hex */
+  padding: 10px;
+ 
+}
+
+
+
 /*  Footer Styling  */
 footer {
   border-top: 2px solid orange;
   clear: both;
   text-align: center;
+  margin-bottom: 50px;
+  background-color:#003a5d;
+  padding: 20px 0px;
+
+
 }
 
 footer p {
   display: inline-block;
   width: 33%;
 }
+
