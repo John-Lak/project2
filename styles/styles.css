@@ -1,12 +1,13 @@
 /*  Header Styling  */
 header img {
   width: 150px;
+  margin-top: 5%;
 }
 
 /*  Body Styling  */
 body {
   background-color: #002B46;
-  color: white;
+  color: #E0FFFF;
   font-family: 'Times New Roman', Arial, sans-serif;
   text-align: center;
   line-height: 1.6;
@@ -24,20 +25,35 @@ body {
   background-color: #003a5d;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
+/*  Color for cyanblue */
+#color{
+  color:#5ecdf8;
+}
+#orangered{
+  color: orangered;
+}
+
+#lightcyan{
+  color:#8cd7f5;
+}
 
 /*  About Us text  */
 #about_us{
   font-size: 48px;
   margin-top: -60px;
+  color: orangered;
+  
 }
 
 #hometown_description{
   font-size: 38px;
+  color:orangered
 }
 
 
 #members_page{
   font-size: 38px;
+  color:orangered;
 }
 
 
@@ -146,12 +162,14 @@ article {
 #title_index {
   text-align: center;
   font-size: 38px;
+  color:white;
 }
 
 /* Left aligns sub-context text with same large font size */
 #sub_context {
   text-align: left;
   font-size: 38px;
+  color:white;
 }
 
 /* Styles paragraphs for better readability */
@@ -180,7 +198,7 @@ p {
 
 .prompt3{
   float: right;
-  width: 34%;
+  width: 33%;
   border: 2px solid ; 
   border-radius: 20px;
 }
@@ -304,7 +322,7 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-.job-box h2 {
+.job-box h1 {
   font-size: 28px;
   color: #5ecdf8;
   margin-bottom: 10px;
@@ -324,9 +342,10 @@ input[type="submit"]:hover {
 
 /* Adds margin to bullet points inside job boxes */
 .jobs-bullets {
-  margin-left: 20px;
+  text-align:center;
   list-style-type: none;
   line-height: 2.0;
+  font-size: 20px;
 }
 
 /* Arranges job boxes in a flexible, centered, and wrapped layout */
@@ -370,7 +389,6 @@ input[type="submit"]:hover {
   box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
   transition: all 0.3s ease;
 }
-
 
 /* Styles job info boxes with border, shadow, padding, and layout */
 .apply-box {
@@ -446,7 +464,6 @@ figure{
 
 /* Center the table */
 .info-table {
- 
   width: 100%;
   border-collapse: collapse;
   text-align: cen;
@@ -485,7 +502,7 @@ footer {
   padding: 20px 0px;
 }
 
-footer p {
+footer h2 {
   display: inline-block;
   width: 33%;
 }
@@ -493,4 +510,16 @@ footer p {
 footer a:hover {
   text-decoration: underline;
   color: #5ecdf8;
+}
+
+/* fluid layout (the page should “Reflow” on page resize). */
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
