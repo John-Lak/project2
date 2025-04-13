@@ -1,5 +1,5 @@
 /*  Header Styling  */
-img {
+header img {
   width: 150px;
 }
 
@@ -9,7 +9,10 @@ body {
   color: white;
   font-family: 'Times New Roman', Arial, sans-serif;
   text-align: center;
-  padding: 20px;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, #002B46, #00304e);
 }
 /*  main in the about.html  */
 .about_main{
@@ -20,8 +23,8 @@ body {
   margin-bottom: 30px;
   background-color: #003a5d;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  
 }
+
 /*  About Us text  */
 #about_us{
   font-size: 48px;
@@ -42,6 +45,35 @@ body {
 .menu {
   display: inline-block;
   padding: 0px 50px;
+}
+
+.menu a {
+  background-color: transparent;
+  padding: 10px 18px;
+  border: 2px solid #5ecdf8;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #5ecdf8;
+  color: #003a5d;
+}
+
+.menu li a {
+  padding: 10px 20px;
+  background-color: #003a5d;
+  border: 2px solid #5ecdf8;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #5ecdf8;
+  color: #003a5d;
 }
 
 /* Styles individual navigation links inside the menu */
@@ -153,6 +185,72 @@ p {
   border-radius: 20px;
 }
 
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #5ecdf8;
+  border-radius: 6px;
+  background-color: #002b46;
+  color: white;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #48b8df;
+  box-shadow: 0 0 5px #5ecdf8;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  background-color: #5ecdf8;
+  color: #003a5d;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+  background-color: #48b8df;
+  color: #002b46;
+}
 
 /* dont colour */
 #special{
@@ -200,6 +298,30 @@ p {
   flex: 1 1 45%;
 }
 
+.job-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
+  transition: all 0.3s ease;
+}
+
+.job-box h2 {
+  font-size: 28px;
+  color: #5ecdf8;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #5ecdf8;
+  padding-bottom: 5px;
+}
+
+.jobs-bullets li::before {
+  content: "•";
+  color: #5ecdf8;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  content: "🛠️ ";
+}
+
 /* Adds margin to bullet points inside job boxes */
 .jobs-bullets {
   margin-left: 20px;
@@ -217,13 +339,9 @@ p {
 
 .index-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1200px; /* Optional: limits max width */
-  margin: 0 auto;     /* Center it horizontally */
+  flex-wrap: wrap;
 }
 
 .index-box {
@@ -235,17 +353,24 @@ p {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* First box: full width */
+/* Full width for the first box */
 .index-box:nth-child(1) {
   flex: 1 1 100%;
 }
 
-/* Second and third boxes: side by side */
+/* Side-by-side for the second and third boxes */
 .index-box:nth-child(2),
 .index-box:nth-child(3) {
-  flex: 1 1 calc(50% - 10px); /* Half width minus gap */
-  min-width: 300px; /* For responsive wrapping */
+  flex: 1 1 calc(50% - 10px);
+  min-width: 300px;
 }
+
+.index-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
+  transition: all 0.3s ease;
+}
+
 
 /* Styles job info boxes with border, shadow, padding, and layout */
 .apply-box {
@@ -258,6 +383,20 @@ p {
   flex: 1 1 45%;
 }
 
+.apply-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
+  transition: all 0.3s ease;
+}
+
+.apply-box h1 {
+  font-size: 42px;
+  color: #5ecdf8;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #5ecdf8;
+  padding-bottom: 10px;
+}
+
 /* Styles job info boxes with border, shadow, padding, and layout */
 .about-box {
   border: 2px solid #5ecdf8;
@@ -267,6 +406,12 @@ p {
   background-color: #003a5d;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   flex: 1 1 45%;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
+  transition: all 0.3s ease;
 }
 
 /*  About Section List  */
@@ -283,8 +428,6 @@ p {
 figure{
   text-align: center;
 }
-
-
 
 /* Student IDs aligned to the right */
 .student-id {
@@ -340,8 +483,6 @@ footer {
   margin-bottom: 50px;
   background-color:#003a5d;
   padding: 20px 0px;
-
-
 }
 
 footer p {
@@ -349,3 +490,7 @@ footer p {
   width: 33%;
 }
 
+footer a:hover {
+  text-decoration: underline;
+  color: #5ecdf8;
+}
