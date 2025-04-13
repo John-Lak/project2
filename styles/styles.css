@@ -11,6 +11,32 @@ body {
   text-align: center;
   padding: 20px;
 }
+/*  main in the about.html  */
+.about_main{
+  text-align: left;
+  padding:150px;
+  border: 5px solid #5ecdf8;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: #003a5d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  
+}
+/*  About Us text  */
+#about_us{
+  font-size: 48px;
+  margin-top: -60px;
+}
+
+#hometown_description{
+  font-size: 38px;
+}
+
+
+#members_page{
+  font-size: 38px;
+}
+
 
 /*  Menu Display / Navigation Section  */
 .menu {
@@ -120,10 +146,18 @@ p {
   width: 34%;
 }
 
-.special{
-  color:red;
+.prompt3{
+  float: right;
+  width: 34%;
+  border: 2px solid ; 
+  border-radius: 20px;
 }
 
+
+/* dont colour */
+#special{
+  color: orangered;
+}
 
 /*  Tick Box (Checklist) Styling  */
 .index-bullets {
@@ -157,7 +191,7 @@ p {
 
 /* Styles job info boxes with border, shadow, padding, and layout */
 .job-box {
-  border: 2px solid #5ecdf8;
+  border: 5px solid #5ecdf8;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
@@ -193,7 +227,7 @@ p {
 }
 
 .index-box {
-  border: 2px solid #5ecdf8;
+  border: 5px solid #5ecdf8;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
@@ -215,7 +249,7 @@ p {
 
 /* Styles job info boxes with border, shadow, padding, and layout */
 .apply-box {
-  border: 2px solid #5ecdf8;
+  border: 5px solid #5ecdf8;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
@@ -238,7 +272,6 @@ p {
 /*  About Section List  */
 .about-bullets {
   padding-left: 20px;
-  list-style-type: none;
 }
 
 /* Adds spacing between list items in about section */
@@ -270,10 +303,10 @@ figure{
 
 /* Center the table */
 .info-table {
-  margin: 0 auto;
-  width: 80%;
+ 
+  width: 100%;
   border-collapse: collapse;
-  text-align: center;
+  text-align: cen;
 }
 
 /* Table styling */
@@ -281,13 +314,20 @@ figure{
   font-weight: bold;
   background-color: #003366;
   color: white;
-  padding: 10px;
+  padding: 30px;
+  text-align: center;
 }
 
 .info-table td {
   background-color:#003a5d; /* Light blue using hex */
-  padding: 10px;
+  padding: 20px;
+  text-align: center;
  
+}
+
+.info-table td:hover {
+  background-color: #034b77; 
+  transition: background-color 0.3s ease;
 }
 
 
