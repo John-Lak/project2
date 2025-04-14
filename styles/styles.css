@@ -1,3 +1,17 @@
+/*
+
+filename: [JLNV_part1_project]
+
+author: [John Lakshmalla, Nam Vo]
+
+created: [4/04/2025]
+
+last modified: [14/04/2025]
+
+description: [html files it refers to is JLNV_part1_project]
+
+*/
+
 /*  Header Styling  */
 header img {
   width: 150px;
@@ -14,7 +28,8 @@ body {
   margin: 0;
   background: linear-gradient(to bottom, #002B46, #00304e);
 }
-/*  main in the about.html  */
+
+/*  Main content area in about.html  */
 .about_main{
   text-align: left;
   padding:150px;
@@ -25,23 +40,18 @@ body {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*  About Us text  */
+/*  About Us Section text styling  */
 #about_us{
   font-size: 48px;
   margin-top: -60px;
 }
 
-#hometown_description{
-  font-size: 38px;
-}
-
-
+#hometown_description,
 #members_page{
   font-size: 38px;
 }
 
-
-/*  Menu Display / Navigation Section  */
+/*  Navigation Menu Styling  */
 .menu {
   display: inline-block;
   padding: 0px 50px;
@@ -60,23 +70,7 @@ body {
   color: #003a5d;
 }
 
-.menu li a {
-  padding: 10px 20px;
-  background-color: #003a5d;
-  border: 2px solid #5ecdf8;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.menu li a:hover {
-  background-color: #5ecdf8;
-  color: #003a5d;
-}
-
-/* Styles individual navigation links inside the menu */
+/*  Styles for individual navigation links  */
 nav .menu a {
   display: block;
   padding: 10px 20px;
@@ -88,29 +82,26 @@ nav .menu a {
   margin-top: 30px;
 }
 
-/* Changes background color on hover for menu links */
 nav .menu a:hover {
   background-color: #5ecdf8;
 }
 
-/* Resets background color when a menu link is active (clicked) */
 nav .menu a:active {
   background-color: #003a5d;
 }
 
-/* Removes bullet points from unordered list in nav */
 nav ul {
   list-style: none;
 }
 
-/* Sets default style for all navigation links */
+/*  General styling for all navigation links  */
 nav a {
   text-decoration: none;
   padding: 0.2em 0.6em;
   color: white;
 }
 
-/* Adds orange color and border */
+/*  Styling for highlighted text  */
 #border {
   color: orange;
   border: 1.5px solid orange;
@@ -129,7 +120,6 @@ th, td {
   text-align: left;
 }
 
-/* Styles table to collapse borders and use full width */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -148,19 +138,19 @@ article {
   font-size: 38px;
 }
 
-/* Left aligns sub-context text with same large font size */
+/*  Sub-context Styling for text  */
 #sub_context {
   text-align: left;
   font-size: 38px;
 }
 
-/* Styles paragraphs for better readability */
+/*  Paragraph Styling  */
 p {
   line-height: 2.0;
   font-size: 25px;
 }
 
-/* Changes background color on hover for job-related elements */
+/*  Job-related hover effects  */
 .job:hover {
   background-color: #48b8df;
 }
@@ -173,18 +163,18 @@ p {
   border-radius: 10px;
 }
 
-.prompt2{
+.prompt2,
+.prompt3{
   float:right;
   width: 34%;
 }
 
 .prompt3{
-  float: right;
-  width: 34%;
-  border: 2px solid ; 
+  border: 2px solid;
   border-radius: 20px;
 }
 
+/*  Form Styling  */
 form {
   max-width: 700px;
   margin: 0 auto;
@@ -212,6 +202,7 @@ textarea {
   font-size: 16px;
 }
 
+/*  Input Focus Styling  */
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
@@ -233,6 +224,34 @@ input[type="checkbox"] + label {
   font-size: 18px;
 }
 
+/*  Aligning radio buttons and checkboxes horizontally  */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px 30px;
+  margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-group label {
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+/*  Submit Button Styling  */
 input[type="submit"] {
   background-color: #5ecdf8;
   color: #003a5d;
@@ -252,12 +271,12 @@ input[type="submit"]:hover {
   color: #002b46;
 }
 
-/* dont colour */
-#special{
+/*  Special Text Styling  */
+#special {
   color: orangered;
 }
 
-/*  Tick Box (Checklist) Styling  */
+/*  Checklist (Tick Box) Styling  */
 .index-bullets {
   list-style-type: none;
   padding: 0;
@@ -268,14 +287,14 @@ input[type="submit"]:hover {
   font-size: 25px;
 }
 
-/* Adds a checkmark icon before each checklist item */
+/*  Adding checkmark to checklist items  */
 .index-bullets li::before {
   content: '✔';
   color: #5ecdf8;
   margin-right: 10px;
 }
 
-/*  View Open Jobs Menu, Styles job buttons  */
+/*  Job Menu and Button Styling  */
 .job {
   background-color: #5ecdf8;
   color: #003a5d;
@@ -287,7 +306,7 @@ input[type="submit"]:hover {
   font-size: 25px;
 }
 
-/* Styles job info boxes with border, shadow, padding, and layout */
+/*  Job Info Box Styling  */
 .job-box {
   border: 5px solid #5ecdf8;
   border-radius: 10px;
@@ -298,6 +317,7 @@ input[type="submit"]:hover {
   flex: 1 1 45%;
 }
 
+/*  Hover Effect for Job Boxes  */
 .job-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
@@ -312,24 +332,14 @@ input[type="submit"]:hover {
   padding-bottom: 5px;
 }
 
-.jobs-bullets li::before {
-  content: "•";
-  color: #5ecdf8;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  content: "🛠️ ";
-}
-
-/* Adds margin to bullet points inside job boxes */
+/*  Job Box List Styling  */
 .jobs-bullets {
   margin-left: 20px;
   list-style-type: none;
   line-height: 2.0;
 }
 
-/* Arranges job boxes in a flexible, centered, and wrapped layout */
+/*  Job Box Layout (Flexible)  */
 .job-container {
   display: flex;
   gap: 20px;
@@ -337,6 +347,7 @@ input[type="submit"]:hover {
   flex-wrap: wrap;
 }
 
+/*  Index Page Layout (Flexible)  */
 .index-container {
   display: flex;
   gap: 20px;
@@ -353,12 +364,11 @@ input[type="submit"]:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Full width for the first box */
+/*  Layout for Index Boxes (1st Full Width, 2nd & 3rd Side-by-Side)  */
 .index-box:nth-child(1) {
   flex: 1 1 100%;
 }
 
-/* Side-by-side for the second and third boxes */
 .index-box:nth-child(2),
 .index-box:nth-child(3) {
   flex: 1 1 calc(50% - 10px);
@@ -371,8 +381,7 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-
-/* Styles job info boxes with border, shadow, padding, and layout */
+/*  Apply Box Styling  */
 .apply-box {
   border: 5px solid #5ecdf8;
   border-radius: 10px;
@@ -389,15 +398,7 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-.apply-box h1 {
-  font-size: 42px;
-  color: #5ecdf8;
-  margin-bottom: 30px;
-  border-bottom: 2px solid #5ecdf8;
-  padding-bottom: 10px;
-}
-
-/* Styles job info boxes with border, shadow, padding, and layout */
+/*  About Section Box Styling  */
 .about-box {
   border: 2px solid #5ecdf8;
   border-radius: 10px;
@@ -405,7 +406,6 @@ input[type="submit"]:hover {
   margin-bottom: 30px;
   background-color: #003a5d;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  flex: 1 1 45%;
 }
 
 .about-box:hover {
@@ -414,45 +414,37 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-/*  About Section List  */
+/*  About Section List Styling  */
 .about-bullets {
   padding-left: 20px;
 }
 
-/* Adds spacing between list items in about section */
 .about-bullets li {
   margin-bottom: 8px;
 }
 
-/* Images & Members interest */
-figure{
-  text-align: center;
-}
-
-/* Student IDs aligned to the right */
+/*  Student ID Styling  */
 .student-id {
   float: right;
   font-weight: bold;
   color: #ffffff;
 }
 
-/* Image with border, floated right */
+/*  Image Styling for Team Photos  */
 .team-photo img {
-  border: 3px solid #004080; /* Blue border using shorthand */
+  border: 3px solid #004080;
   float: right;
   margin: 10px;
   width: 200px;
 }
 
-/* Center the table */
+/*  Info Table Styling  */
 .info-table {
- 
   width: 100%;
   border-collapse: collapse;
-  text-align: cen;
+  text-align: center;
 }
 
-/* Table styling */
 .info-table th {
   font-weight: bold;
   background-color: #003366;
@@ -462,18 +454,15 @@ figure{
 }
 
 .info-table td {
-  background-color:#003a5d; /* Light blue using hex */
+  background-color:#003a5d;
   padding: 20px;
   text-align: center;
- 
 }
 
 .info-table td:hover {
-  background-color: #034b77; 
+  background-color: #034b77;
   transition: background-color 0.3s ease;
 }
-
-
 
 /*  Footer Styling  */
 footer {

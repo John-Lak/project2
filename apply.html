@@ -6,139 +6,154 @@
   <meta name="keywords" content="Form filling">
   <meta name="author" content="John Lakshmalla, Nam Vo">
   <title>Apply Page</title>
-  <!-- References to external CSS files -->
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+  <!-- Header with logo -->
+  <header>
+    <a href="index.html">
       <img src="images/logo_newer.png" alt="Logo of JLNV">
-    </header>
-    
-      <nav>
-        <p class="menu"><a href="index.html">Home Page</a></p> 
-        <p class="menu"><a href="jobs.html">Jobs Page</a></p> 
-        <p class="menu"><a href="apply.html">Apply Page</a></p> 
-        <p class="menu"><a href="about.html">About Page</a></p>
-        <hr id="border">
-      </nav>
+    </a>
+  </header>
+  
+  <!-- Navigation menu -->
+  <nav>
+    <p class="menu"><a href="index.html">Home Page</a></p> 
+    <p class="menu"><a href="jobs.html">Jobs Page</a></p> 
+    <p class="menu"><a href="apply.html">Apply Page</a></p> 
+    <p class="menu"><a href="about.html">About Page</a></p>
+    <hr id="border"> <!-- Border for separation -->
+  </nav>
 
-
-   <main class="apply-box">
+  <!-- Main content of the apply page -->
+  <main class="apply-box">
     <header>
-      <h1>Job Application</h1>
+      <h1>Job Application</h1> <!-- Page title -->
     </header>
+
+    <!-- Job application form -->
     <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-      <!-- Select the job reference from dropdown menu -->
-    <p>
-      <label for="job ref no.">Job reference Number: </label>
-      <select name="job ref no." id="job ref no.">
-            <option value="select">Select</option>
-            <option value="ar001" required="required">AR001</option>
-            <option value="nt027" required="required">NT027</option>
-            <option value="da042" required="required">DA042</option>
-            <option value="cs035" required="required">CS035</option>
-            <option value="it042" required="required">IT042</option>
-            <option value="ce403" required="required">CE403</option>
-      </select>
-    </p>
 
-      <!-- First name and last name -->
-    <p>
-      <label for="first">First Name: </label>
-      <input type="text" name="fn" id="name" placeholder="First Name" required="required" maxlength="20" pattern="[A-Za-z]+">
-    </p>
-    <p>
-      <label for="last">Last Name:</label> 
-      <input type="text" name="ln" id="name" placeholder="Last Name" required="required" maxlength="20" pattern="[A-Za-z]+">
-    </p>
-
-      <!-- Date of Birth -->
-    <p>
-      <label for="dob">Date of Birth: </label> 
-      <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required="required">
-    </p>
-
-      <!-- Select one of the radios for gender -->
-    <p>
-      <label>Gender: </label>
-    <input type="radio" id="male" name="gender" value="male" required>
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label>
-    </p>
-
-    <!-- Address and Suburb/Town -->
-    <p>
-      <label for="street">Street Address: </label>
-      <input type="text" name="sd" id="address" required="required" maxlength="40">
-    </p>
-    <p>
-      <label for="suburb">Suburb/Town: </label> 
-      <input type="text" name="st" id="suburb" required="required" maxlength="40">
-    </p>
-
-    <!-- Select the state from dropdown menu -->
-    <p>
-      <label for="reference">State: </label>
-      <select name="reference" id="state">
-            <option value="">State</option>
-            <option value="vic" required="required">VIC</option>
-            <option value="nsw" required="required">NSW</option>
-            <option value="qld" required="required">QLD</option>
-            <option value="nt" required="required">NT</option>
-            <option value="wa" required="required">WA</option>
-            <option value="sa" required="required">SA</option>
-            <option value="tas" required="required">TAS</option>
-            <option value="act" required="required">ACT</option>
+      <!-- Job Reference Selection -->
+      <p>
+        <label for="jobRef">Job reference Number: </label>
+        <select name="job_ref_no" id="jobRef" required>
+          <option value="select">Select</option>
+          <option value="ar001">AR001</option>
+          <option value="nt027">NT027</option>
+          <option value="da042">DA042</option>
+          <option value="cs035">CS035</option>
+          <option value="it042">IT042</option>
+          <option value="ce403">CE403</option>
         </select>
-    </p>
+      </p>
 
-    <!-- Postcode -->
-    <p>
-      <label for="postcode">Postcode: </label>
-      <input type="text" name="pc" id="postcode" placeholder="Postcode" required="required" maxlength="4" pattern="\d{4}">
-    </p>
+      <!-- First Name Input -->
+      <p>
+        <label for="firstName">First Name: </label>
+        <input type="text" name="fn" id="firstName" placeholder="First Name" required maxlength="20" pattern="[A-Za-z]+">
+      </p>
+      
+      <!-- Last Name Input -->
+      <p>
+        <label for="lastName">Last Name:</label> 
+        <input type="text" name="ln" id="lastName" placeholder="Last Name" required maxlength="20" pattern="[A-Za-z]+">
+      </p>
 
-    <!-- Email Address -->
-    <p>
-      <label for="address">Email Address: </label>
-      <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required="required">
-    </p>
+      <!-- Date of Birth Input -->
+      <p>
+        <label for="dob">Date of Birth: </label> 
+        <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required>
+      </p>
 
-     <!-- Required Technical Skills -->
-    <p>
-    <label>Required Technical Skills: </label>
-      <input type="checkbox" id="ts1" name="category[]" value="ts1" checked="checked">
-      <label for="ts1">Technical Skill 1</label> 
-  &nbsp;
-    <input type="checkbox" id="ts2" name="category[]" value="ts2">
-    <label for="ts2">Technical Skill 2</label>  
-  &nbsp;
-    <input type="checkbox" id="ts3" name="category[]" value="ts3">
-    <label for="ts3">Technical Skill 3</label>
-  &nbsp;
-    <input type="checkbox" id="ts4" name="category[]" value="ts4">
-    <label for="ts4">Technical Skill 4</label>
-  &nbsp; 
-    <input type="checkbox" id="ts5" name="category[]" value="ts5">
-    <label for="ts5">Technical Skill 5</label>
-    </p>
+      <!-- Gender Selection -->
+      <p>
+        <label>Gender: </label>
+        <section class="radio-group">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
 
-    <!-- Write a comment on the other skills -->
-    <p>
-      <label for="issue">Other Skills:</label>
-    </p>
-    <p>
-      <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40" required="required"></textarea>
-    </p>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </section>
+      </p>
 
-    <!-- Submission of job application -->
+      <!-- Street Address Input -->
+      <p>
+        <label for="street">Street Address: </label>
+        <input type="text" name="sd" id="street" required maxlength="40">
+      </p>
+
+      <!-- Suburb/Town Input -->
+      <p>
+        <label for="suburb">Suburb/Town: </label> 
+        <input type="text" name="st" id="suburb" required maxlength="40">
+      </p>
+
+      <!-- State Selection -->
+      <p>
+        <label for="state">State: </label>
+        <select name="state" id="state" required>
+          <option value="">State</option>
+          <option value="vic">VIC</option>
+          <option value="nsw">NSW</option>
+          <option value="qld">QLD</option>
+          <option value="nt">NT</option>
+          <option value="wa">WA</option>
+          <option value="sa">SA</option>
+          <option value="tas">TAS</option>
+          <option value="act">ACT</option>
+        </select>
+      </p>
+
+      <!-- Postcode Input -->
+      <p>
+        <label for="postcode">Postcode: </label>
+        <input type="text" name="pc" id="postcode" placeholder="Postcode" required maxlength="4" pattern="\d{4}">
+      </p>
+
+      <!-- Email Input -->
+      <p>
+        <label for="email">Email Address: </label>
+        <input type="email" name="email" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+      </p>
+
+      <!-- Technical Skills Checkboxes -->
+      <p>
+        <label>Required Technical Skills: </label>
+        <section class="checkbox-group">
+          <input type="checkbox" id="ts1" name="category[]" value="ts1" checked>
+          <label for="ts1">Technical Skill 1</label> 
+
+          <input type="checkbox" id="ts2" name="category[]" value="ts2">
+          <label for="ts2">Technical Skill 2</label>  
+
+          <input type="checkbox" id="ts3" name="category[]" value="ts3">
+          <label for="ts3">Technical Skill 3</label>
+
+          <input type="checkbox" id="ts4" name="category[]" value="ts4">
+          <label for="ts4">Technical Skill 4</label>
+
+          <input type="checkbox" id="ts5" name="category[]" value="ts5">
+          <label for="ts5">Technical Skill 5</label>
+        </section>
+      </p>
+
+      <!-- Other Skills Textarea -->
+      <p>
+        <label for="skill">Other Skills:</label>
+      </p>
+      <p>
+        <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40" required></textarea>
+      </p>
+
+      <!-- Submit Button -->
       <input type="submit" value="Submit">
-  </form>
+    </form>
+  </main>   
 
-</main>   
-
+  <!-- Footer Section -->
   <footer class="site-footer">
     <p><a href="mailto:info@companyname.com.au">info@jlnv.com.au</a></p>
     <p><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" title="Jira Project" target="_blank"> Jira Project </a></p>
