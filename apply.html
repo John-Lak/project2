@@ -31,7 +31,7 @@
     <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
       <!-- Select the job reference from dropdown menu -->
     <p>
-      <label for="job ref no.">Job reference Number: </label>
+      <label for="job ref no."> <span id="color">Job reference Number:</span></label>
       <select name="job ref no." id="job ref no.">
             <option value="select">Select</option>
             <option value="ar001" required="required">AR001</option>
@@ -45,44 +45,56 @@
 
       <!-- First name and last name -->
     <section>
-      <p>
-        <label for="first">First Name: </label>
-        <input type="text" name="fn" id="name" placeholder="First Name" required="required" maxlength="20" pattern="[A-Za-z]+">
-      </p>
-      <p>
-        <label for="last">Last Name:</label> 
-        <input type="text" name="ln" id="name" placeholder="Last Name" required="required" maxlength="20" pattern="[A-Za-z]+">
-      </p>
+      <h2>
+        <label for="first"><span id="color">First Name:</span></label>
+        <input type="text" name="fn" id="first" placeholder="First Name" required maxlength="20" pattern="[A-Za-z]+" aria-label="First Name">
+      </h2>
+      
+      <h2>
+        <label for="last"><span id="color">Last Name:</span></label> 
+        <input type="text" name="ln" id="last" placeholder="Last Name" required="required" maxlength="20" pattern="[A-Za-z]+" aria-label="Last Name">
+      </h2>
   
         <!-- Date of Birth -->
-      <p>
-        <label for="dob">Date of Birth: </label> 
+      <h2>
+        <label for="dob"><span id="color">Date of Birth:</span></label> 
         <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required="required">
-      </p>
+      </h2>
   
         <!-- Select one of the radios for gender -->
-      <p>
-        <label>Gender: </label>
-      <input type="radio" id="male" name="gender" value="male" required>
-      <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female">
-      <label for="female">Female</label>
-      </p>
+      <h2>
+        <legend><span id="color">Gender:</span></legend>
+
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" required>
+          Male
+        </label>
+      
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female">
+          Female
+        </label>
+      
+        <label for="other">
+          <input type="radio" id="other" name="gender" value="other">
+          Other
+        </label>
+      </h2>
   
       <!-- Address and Suburb/Town -->
-      <p>
-        <label for="street">Street Address: </label>
-        <input type="text" name="sd" id="address" required="required" maxlength="40">
-      </p>
-      <p>
-        <label for="suburb">Suburb/Town: </label> 
+      <h2>
+        <label for="street"><span id="color">Street Address:</span> </label>
+        <input type="text" name="sd" id="street" required="required" maxlength="40">
+      </h2>
+      <h2>
+        <label for="suburb"><span id="color">Suburb/Town:</span> </label> 
         <input type="text" name="st" id="suburb" required="required" maxlength="40">
-      </p>
+      </h2>
   
       <!-- Select the state from dropdown menu -->
-      <p>
-        <label for="reference">State: </label>
-        <select name="reference" id="state">
+      <h2>
+        <label for="reference"><span id="color">State:</span></label>
+        <select name="reference" id="reference">
               <option value="">State</option>
               <option value="vic" required="required">VIC</option>
               <option value="nsw" required="required">NSW</option>
@@ -93,23 +105,24 @@
               <option value="tas" required="required">TAS</option>
               <option value="act" required="required">ACT</option>
           </select>
-      </p>
+        </h2>
   
       <!-- Postcode -->
-      <p>
-        <label for="postcode">Postcode: </label>
+      <h2>
+        <label for="postcode"><span id="color">Postcode:</span> </label>
         <input type="text" name="pc" id="postcode" placeholder="Postcode" required="required" maxlength="4" pattern="\d{4}">
-      </p>
+      </h2>
   
       <!-- Email Address -->
-      <p>
-        <label for="address">Email Address: </label>
-        <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required="required">
-      </p>
+      <h2>
+        <label for="address"><span id="color">Email Address:</span> </label>
+        <input type="email" name="email" id="address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required="required"  aria-label="Email">
+      </h2>
   
        <!-- Required Technical Skills -->
-      <p>
-      <label>Required Technical Skills: </label>
+      <h2>
+      <label><span id="color">Required Technical Skills:</span> </label>
+
         <input type="checkbox" id="ts1" name="category[]" value="ts1" checked="checked">
         <label for="ts1">Technical Skill 1</label> 
     &nbsp;
@@ -124,28 +137,28 @@
     &nbsp; 
       <input type="checkbox" id="ts5" name="category[]" value="ts5">
       <label for="ts5">Technical Skill 5</label>
-      </p>
+      </h2>
   
       <!-- Write a comment on the other skills -->
+      <h2>
+        <label for="issue"><span id="color">Other Skills:</span></label>
+      </h2>
       <p>
-        <label for="issue">Other Skills:</label>
-      </p>
-      <p>
-        <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40" required="required"></textarea>
+        <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40" required="required" aria-label="Other"></textarea>
       </p>
   
       <!-- Submission of job application -->
         <input type="submit" value="Submit">
-    </form>
+      </form>
   
 
     </section>
       
 </main>   
 
-  <footer class="site-footer">
-    <h2><a href="mailto:info@companyname.com.au">info@jlnv.com.au</a></h2>
-    <h2><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" title="Jira Project" target="_blank"> Jira Project </a></h2>
-  </footer>
+<footer class="site-footer">
+  <h2><a href="mailto:info@jlnv.com.au">info@jlnv.com.au</a></h2>
+  <h2><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" alt="Jira Project" target="_blank"> Jira Project</a></h2>
+</footer>
 </body>
 </html>

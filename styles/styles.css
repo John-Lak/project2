@@ -37,6 +37,10 @@ body {
   color:#8cd7f5;
 }
 
+#LigtOR{
+  color: rgb(249, 84, 23);
+}
+
 /*  About Us text  */
 #about_us{
   font-size: 48px;
@@ -451,7 +455,7 @@ figure{
 .student-id {
   float: right;
   font-weight: bold;
-  color: #ffffff;
+  color: orangered;
 }
 
 /* Image with border, floated right */
@@ -489,7 +493,6 @@ figure{
   background-color: #034b77; 
   transition: background-color 0.3s ease;
 }
-
 
 
 /*  Footer Styling  */
