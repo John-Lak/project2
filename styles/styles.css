@@ -202,7 +202,7 @@ p {
   border-radius: 20px;
 }
 
-/*  Form Styling  */
+/* AI generated Form Styling  */
 form {
   max-width: 700px;
   margin: 0 auto;
@@ -230,7 +230,7 @@ textarea {
   font-size: 16px;
 }
 
-/*  Input Focus Styling  */
+/* AI generated Input Focus Styling  */
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
@@ -279,7 +279,7 @@ input[type="checkbox"] + label {
   white-space: nowrap;
 }
 
-/*  Submit Button Styling  */
+/* AI generated Submit Button Styling  */
 input[type="submit"] {
   background-color: #5ecdf8;
   color: #003a5d;
@@ -304,7 +304,7 @@ input[type="submit"]:hover {
   color: orangered;
 }
 
-/*  Checklist (Tick Box) Styling  */
+/* AI generated Checklist Styling  */
 .index-bullets {
   list-style-type: none;
   padding: 0;
@@ -345,7 +345,7 @@ input[type="submit"]:hover {
   flex: 1 1 45%;
 }
 
-/*  Hover Effect for Job Boxes  */
+/* AI generated Hover Effect for Job Boxes  */
 .job-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
@@ -368,7 +368,7 @@ input[type="submit"]:hover {
   font-size: 20px;
 }
 
-/*  Job Box Layout (Flexible)  */
+/*  Job Box Layout  */
 .job-container {
   display: flex;
   gap: 20px;
@@ -376,7 +376,7 @@ input[type="submit"]:hover {
   flex-wrap: wrap;
 }
 
-/*  Index Page Layout (Flexible)  */
+/*  Index Page Layout  */
 .index-container {
   display: flex;
   gap: 20px;
@@ -393,7 +393,7 @@ input[type="submit"]:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*  Layout for Index Boxes (1st Full Width, 2nd & 3rd Side-by-Side)  */
+/* AI Generated Layout for Index Boxes (1st Full Width, 2nd & 3rd Side-by-Side)  */
 .index-box:nth-child(1) {
   flex: 1 1 100%;
 }
@@ -427,7 +427,7 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-/*  About Section Box Styling  */
+/* About Section Box Styling  */
 .about-box {
   border: 2px solid #5ecdf8;
   border-radius: 10px;
