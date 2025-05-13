@@ -1,3 +1,20 @@
+<?php include 'header.inc'; ?>
+<head>
+  <meta name="description" content="Home page for the company">
+  <meta name="keywords" content="Info, advertising, jobs">
+  <title>Home Page</title>
+</head>
+
+<?php include 'nav.inc'; ?>
+
+<main class="content">
+  <article class="index-container">
+    <!-- Page-specific content here -->
+  </article>
+</main>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,24 +27,7 @@
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-<body>
-  <!-- Header section containing the logo that links to the homepage -->
-  <header>
-    <a href="index.html">
-      <img src="images/logo_newer.png" alt="Logo of JLNV">
-    </a>
-  </header>
 
-  <!-- Navigation bar with links to different pages -->
-  <nav>
-    <h1 class="menu"><a href="index.html">Home Page</a></h1> 
-    <h1 class="menu"><a href="jobs.html">Jobs Page</a></h1> 
-    <h1 class="menu"><a href="apply.html">Apply Page</a></h1> 
-    <h1 class="menu"><a href="about.html">About Page</a></h1>
-
-    <!-- Horizontal line to separate navigation from the main content -->
-    <hr id="border">
-  </nav>
 
   <!-- Main content of the homepage -->
   <main class="content">

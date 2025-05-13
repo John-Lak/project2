@@ -1,3 +1,17 @@
+<?php include 'header.inc'; ?>
+<head>
+  <meta name="description" content="About JLNV Solutions">
+  <meta name="keywords" content="About, mission, vision, team">
+  <title>About Page</title>
+</head>
+
+<?php include 'nav.inc'; ?>
+
+<!--Moved all the navigation menu to thenav.inc-->
+<!--Moved all the footer to the footer.inc-->
+<!--Moved all the header to the header.inc-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,24 +24,11 @@
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-<body>
-  <!-- Header section containing the company logo -->
-  <header>
-    <a href="index.html">
-      <img src="images/logo_newer.png" alt="Logo of JLNV">
-    </a>
-  </header>
 
-  <!-- Navigation menu with links to different pages -->
-  <nav>
-    <p class="menu"><a href="index.html">Home Page</a></p> 
-    <p class="menu"><a href="jobs.html">Jobs Page</a></p> 
-    <p class="menu"><a href="apply.html">Apply Page</a></p> 
-    <p class="menu"><a href="about.html">About Page</a></p>
-    <hr id="border">
-  </nav>
-  
-  <!-- Main content area for the About page -->
+
+<body>
+
+  <!--Main content area for the About page -->
   <main class="about_main">
     <aside>
       <!-- Group photo and basic information about the group -->
@@ -86,11 +87,9 @@
       </p>
     </section>
   </main>
+  
+  <?php include 'footer.inc'; ?>
 
-  <!-- Footer with contact information and a link to the Jira project -->
-  <footer class="site-footer">
-    <h2><a href="mailto:info@jlnv.com.au">info@jlnv.com.au</a></h2>
-    <h2><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" alt="Jira Project" target="_blank">Jira Project</a></h2>
-  </footer>
+
 </body>
 </html>

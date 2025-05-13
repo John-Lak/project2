@@ -1,3 +1,17 @@
+<?php include 'header.inc'; ?>
+<head>
+  <meta name="description" content="Jobs page for the company">
+  <meta name="keywords" content="Jobs, job description, pay">
+  <title>Jobs Page</title>
+</head>
+
+<?php include 'nav.inc'; ?>
+
+
+<!--Moved all the navigation menu to thenav.inc-->
+<!--Moved all the footer to the footer.inc-->
+<!--Moved all the header to the header.inc-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,22 +24,7 @@
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-<body>
-  <!-- Header section containing the logo that links to the homepage -->
-  <header>
-    <a href="index.html">
-      <img src="images/logo_newer.png" alt="Logo of JLNV">
-    </a>
-  </header>
 
-  <!-- Navigation menu with links to other pages on the site -->
-  <nav>
-    <h1 class="menu"><a href="index.html">Home Page</a></h1> 
-    <h1 class="menu"><a href="jobs.html">Jobs Page</a></h1> 
-    <h1 class="menu"><a href="apply.html">Apply Page</a></h1> 
-    <h1 class="menu"><a href="about.html">About Page</a></h1>
-    <hr id="border"> <!-- Decorative horizontal rule under the navigation -->
-  </nav>
 
   <!-- Main content section -->
   <!-- This is ALL AI generated text -->

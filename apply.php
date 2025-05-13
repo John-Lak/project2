@@ -1,3 +1,12 @@
+<?php include 'header.inc'; ?>
+<head>
+  <meta name="description" content="Apply for a job at JLNV">
+  <meta name="keywords" content="Apply, application form, JLNV jobs">
+  <title>Apply Page</title>
+</head>
+
+<?php include 'nav.inc'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,23 +18,10 @@
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-<body>
-  <!-- Header with logo -->
-  <header>
-    <a href="index.html">
-      <img src="images/logo_newer.png" alt="Logo of JLNV">
-    </a>
-  </header>
-  
-  <!-- Navigation menu -->
-  <nav>
-    <p class="menu"><a href="index.html">Home Page</a></p> 
-    <p class="menu"><a href="jobs.html">Jobs Page</a></p> 
-    <p class="menu"><a href="apply.html">Apply Page</a></p> 
-    <p class="menu"><a href="about.html">About Page</a></p>
-    <hr id="border"> <!-- Border for separation -->
-  </nav>
 
+
+
+ 
   <!-- Main content of the apply page -->
   <main class="apply-box">
     <header>
