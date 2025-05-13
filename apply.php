@@ -7,6 +7,10 @@
 
 <?php include 'nav.inc'; ?>
 
+<!--Moved all the navigation menu to thenav.inc-->
+<!--Moved all the footer to the footer.inc-->
+<!--Moved all the header to the header.inc-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
