@@ -33,7 +33,7 @@
     </header>
 
     <!-- Job application form -->
-    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+    <form method="post" novalidate="novalidate" action="https://localhost/project2/process_eoi.php">
 
       <!-- Job Reference Selection -->
       <p>
@@ -64,7 +64,7 @@
       <!-- Date of Birth Input -->
       <p>
         <label for="dob">Date of Birth: </label> 
-        <input type="text" name="date of birth" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required>
+        <input type="date" name="date of birth" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required>
       </p>
 
       <!-- Gender Selection -->
@@ -145,7 +145,7 @@
         <label for="skill">Other Skills:</label>
       </p>
       <p>
-        <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40" required></textarea>
+        <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40"></textarea>
       </p>
 
       <!-- Submit Button -->
