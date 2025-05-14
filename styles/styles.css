@@ -1,18 +1,18 @@
 /*
 
-filename: [JLNV_part1_project]
+filename: [JLNV_part2_project]
 
 author: [John Lakshmalla, Nam Vo]
 
 created: [4/04/2025]
 
-last modified: [14/04/2025]
+last modified: [14/05/2025]
 
-description: [html files it refers to is JLNV_part1_project]
+description: [html files it refers to is JLNV_part2_project]
 
 */
 
-/*  Header Styling  */
+/*  Header Styling */
 header img {
   width: 150px;
   margin-top: 5%;
@@ -30,7 +30,7 @@ body {
   background: linear-gradient(to bottom, #002B46, #00304e);
 }
 
-/*  Main content area in about.html  */
+/*  Main content area in about.html */
 .about_main{
   text-align: left;
   padding:150px;
@@ -40,42 +40,42 @@ body {
   background-color: #003a5d;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-/*  Color for cyanblue */
-#color{
+
+/*  Color styles for specific elements */
+#color {
   color:#5ecdf8;
 }
-#orangered{
+
+#orangered {
   color: orangered;
 }
 
-#lightcyan{
+#lightcyan {
   color:#8cd7f5;
 }
 
-#LigtOR{
+#LigtOR {
   color: rgb(249, 84, 23);
 }
 
-/*  About Us Section text styling  */
-#about_us{
+/*  About Us Section text styling */
+#about_us {
   font-size: 48px;
   margin-top: -60px;
   color: orangered;
-  
 }
 
-#hometown_description{
+#hometown_description {
   font-size: 38px;
-  color:orangered
+  color: orangered;
 }
 
-
-#members_page{
+#members_page {
   font-size: 38px;
-  color:orangered;
+  color: orangered;
 }
 
-/*  Navigation Menu Styling  */
+/*  Navigation Menu Styling */
 .menu {
   display: inline-block;
   padding: 0px 50px;
@@ -94,7 +94,7 @@ body {
   color: #003a5d;
 }
 
-/*  Styles for individual navigation links  */
+/*  Styles for individual navigation links */
 nav .menu a {
   display: block;
   padding: 10px 20px;
@@ -118,26 +118,26 @@ nav ul {
   list-style: none;
 }
 
-/*  General styling for all navigation links  */
+/*  General styling for all navigation links */
 nav a {
   text-decoration: none;
   padding: 0.2em 0.6em;
   color: white;
 }
 
-/*  Styling for highlighted text  */
+/*  Styling for highlighted text */
 #border {
   color: orange;
   border: 1.5px solid orange;
   margin-bottom: 30px;
 }
 
-/*  Hyperlink Styling  */
+/*  Hyperlink Styling */
 a {
   color: white;
 }
 
-/*  Table Styling  */
+/*  Table Styling */
 th, td {
   border: 1px solid black;
   padding: 8px;
@@ -151,37 +151,37 @@ table {
   overflow: hidden;
 }
 
-/*  Article Formatting  */
+/*  Article Formatting */
 article {
   text-align: left;
 }
 
-/*  Title Styling for index.html  */
+/*  Title Styling for index.html */
 #title_index {
   text-align: center;
   font-size: 38px;
   color:white;
 }
 
-/*  Sub-context Styling for text  */
+/*  Sub-context Styling for text */
 #sub_context {
   text-align: left;
   font-size: 38px;
   color:white;
 }
 
-/*  Paragraph Styling  */
+/*  Paragraph Styling */
 p {
   line-height: 2.0;
   font-size: 25px;
 }
 
-/*  Job-related hover effects  */
+/*  Job-related hover effects */
 .job:hover {
   background-color: #48b8df;
 }
 
-/*  AI-Generated Picture Display  */
+/*  AI-Generated Picture Display */
 .prompt {
   width: 300%;
   max-width: 1100px;
@@ -202,7 +202,7 @@ p {
   border-radius: 20px;
 }
 
-/* AI generated Form Styling  */
+/* AI generated Form Styling */
 form {
   max-width: 700px;
   margin: 0 auto;
@@ -230,7 +230,7 @@ textarea {
   font-size: 16px;
 }
 
-/* AI generated Input Focus Styling  */
+/* AI generated Input Focus Styling */
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
@@ -252,7 +252,7 @@ input[type="checkbox"] + label {
   font-size: 18px;
 }
 
-/*  Aligning radio buttons and checkboxes horizontally  */
+/*  Aligning radio buttons and checkboxes horizontally */
 .radio-group {
   display: flex;
   gap: 20px;
@@ -279,7 +279,7 @@ input[type="checkbox"] + label {
   white-space: nowrap;
 }
 
-/* AI generated Submit Button Styling  */
+/* AI generated Submit Button Styling */
 input[type="submit"] {
   background-color: #5ecdf8;
   color: #003a5d;
@@ -299,12 +299,12 @@ input[type="submit"]:hover {
   color: #002b46;
 }
 
-/*  Special Text Styling  */
+/*  Special Text Styling */
 #special {
   color: orangered;
 }
 
-/* AI generated Checklist Styling  */
+/* AI generated Checklist Styling */
 .index-bullets {
   list-style-type: none;
   padding: 0;
@@ -315,14 +315,14 @@ input[type="submit"]:hover {
   font-size: 25px;
 }
 
-/*  Adding checkmark to checklist items  */
+/*  Adding checkmark to checklist items */
 .index-bullets li::before {
   content: '✔';
   color: #5ecdf8;
   margin-right: 10px;
 }
 
-/*  Job Menu and Button Styling  */
+/*  Job Menu and Button Styling */
 .job {
   background-color: #5ecdf8;
   color: #003a5d;
@@ -334,7 +334,7 @@ input[type="submit"]:hover {
   font-size: 25px;
 }
 
-/*  Job Info Box Styling  */
+/*  Job Info Box Styling */
 .job-box {
   border: 5px solid #5ecdf8;
   border-radius: 10px;
@@ -345,7 +345,7 @@ input[type="submit"]:hover {
   flex: 1 1 45%;
 }
 
-/* AI generated Hover Effect for Job Boxes  */
+/* AI generated Hover Effect for Job Boxes */
 .job-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
@@ -360,7 +360,7 @@ input[type="submit"]:hover {
   padding-bottom: 5px;
 }
 
-/*  Job Box List Styling  */
+/*  Job Box List Styling */
 .jobs-bullets {
   text-align:center;
   list-style-type: none;
@@ -368,7 +368,7 @@ input[type="submit"]:hover {
   font-size: 20px;
 }
 
-/*  Job Box Layout  */
+/*  Job Box Layout */
 .job-container {
   display: flex;
   gap: 20px;
@@ -376,7 +376,7 @@ input[type="submit"]:hover {
   flex-wrap: wrap;
 }
 
-/*  Index Page Layout  */
+/*  Index Page Layout */
 .index-container {
   display: flex;
   gap: 20px;
@@ -393,7 +393,7 @@ input[type="submit"]:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* AI Generated Layout for Index Boxes (1st Full Width, 2nd & 3rd Side-by-Side)  */
+/* AI Generated Layout for Index Boxes (1st Full Width, 2nd & 3rd Side-by-Side) */
 .index-box:nth-child(1) {
   flex: 1 1 100%;
 }
@@ -410,7 +410,7 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-/*  Apply Box Styling  */
+/*  Apply Box Styling */
 .apply-box {
   border: 5px solid #5ecdf8;
   border-radius: 10px;
@@ -427,7 +427,7 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-/* About Section Box Styling  */
+/* About Section Box Styling */
 .about-box {
   border: 2px solid #5ecdf8;
   border-radius: 10px;
@@ -443,7 +443,7 @@ input[type="submit"]:hover {
   transition: all 0.3s ease;
 }
 
-/*  About Section List Styling  */
+/*  About Section List Styling */
 .about-bullets {
   padding-left: 20px;
 }
@@ -452,14 +452,14 @@ input[type="submit"]:hover {
   margin-bottom: 8px;
 }
 
-/*  Student ID Styling  */
+/*  Student ID Styling */
 .student-id {
   float: right;
   font-weight: bold;
   color: orangered;
 }
 
-/*  Image Styling for Team Photos  */
+/*  Image Styling for Team Photos */
 .team-photo img {
   border: 3px solid #004080;
   float: right;
@@ -467,7 +467,7 @@ input[type="submit"]:hover {
   width: 200px;
 }
 
-/*  Info Table Styling  */
+/*  Info Table Styling */
 .info-table {
   width: 100%;
   border-collapse: collapse;
@@ -493,7 +493,7 @@ input[type="submit"]:hover {
   transition: background-color 0.3s ease;
 }
 
-/*  Footer Styling  */
+/*  Footer Styling */
 footer {
   border-top: 2px solid orange;
   clear: both;
@@ -513,7 +513,7 @@ footer a:hover {
   color: #5ecdf8;
 }
 
-/* fluid layout (the page should “Reflow” on page resize). */
+/* Fluid layout: ensures responsiveness on smaller screens */
 @media (max-width: 768px) {
   main h1 {
     font-size: 1.5rem;
