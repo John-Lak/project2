@@ -1,17 +1,5 @@
 <?php include 'header.inc'; ?>
-<head>
-  <meta name="description" content="Jobs page for the company">
-  <meta name="keywords" content="Jobs, job description, pay">
-  <title>Jobs Page</title>
-</head>
-
 <?php include 'nav.inc'; ?>
-
-
-<!--Moved all the navigation menu to thenav.inc-->
-<!--Moved all the footer to the footer.inc-->
-<!--Moved all the header to the header.inc-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,30 +8,25 @@
   <meta name="keywords" content="Jobs, job description, pay">
   <meta name="author" content="John Lakshmalla, Nam Vo">
   <title>Jobs Page</title>
-  <!-- References to external CSS files -->
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-
-
-  <!-- Main content section -->
-  <!-- This is ALL AI generated text -->
+<body>
   <main>
-    <!-- Main heading for the job listings section -->
-    <h1 span id="special">Position Descriptions</span></h1>
+    <!-- Main heading -->
+    <h1 id="special">Position Descriptions</h1>
 
-    <!-- Container for all job postings -->
+    <!-- Job listings container -->
     <section class="job-container">
 
-      <!-- Individual job listing for Software Engineer -->
+      <!-- Software Engineer -->
       <section class="job-box">
-        <h1>AR001 Software Engineer</h1>
-        <h2>We are seeking a skilled Software Engineer...</h2>
-        <h2 id="orangered"><b>Salary range:</b> $80,000 - $100,000</h2>
-        <h2 id="lightcyan"><b>Reports to:</b> Senior Software Engineer</h2>
+        <h2>AR001 Software Engineer</h2>
+        <p>We are seeking a skilled and passionate Software Engineer to join our development team. This role involves designing, building, and maintaining high-quality software applications that support the operations and goals of our organization. The ideal candidate thrives in collaborative environments, embraces continuous learning, and is committed to writing clean, efficient, and scalable code. You will be involved in all stages of the software development lifecycle, from concept and design to testing and deployment.</p>
+        <p><strong>Salary range:</strong> $80,000 - $100,000</p>
+        <p><strong>Reports to:</strong> Senior Software Engineer</p>
 
-        <!-- List of responsibilities -->
-        <h3 id="orangered"><b>Key Responsibilities</b></h3>
+        <h3>Key Responsibilities</h3>
         <ul class="jobs-bullets">
           <li>Develop and maintain software applications</li>
           <li>Collaborate with cross-functional teams</li>
@@ -51,8 +34,7 @@
           <li>Troubleshoot and debug issues</li>
         </ul>
 
-        <!-- List of required qualifications -->
-        <h3 id="orangered">Required Qualifications</h3>
+        <h3>Required Qualifications</h3>
         <ul class="jobs-bullets">
           <li>Bachelor's degree in Computer Science or related field</li>
           <li>Strong programming skills in Java, Python, or C++</li>
@@ -60,136 +42,125 @@
         </ul>
       </section>
 
-      <!-- Job listing for Network Administrator -->
+      <!-- Network Administrator -->
       <section class="job-box">
-        <h1>NT027 Network Adminstrator</h1>
-        <h2>We are seeking a network administrator...</h2>
-        <h2 id="orangered"><b>Salary range:</b> $70,000 - $90,000</h2>
-        <h2 id="lightcyan"><b>Reports to:</b> IT manager</h2>
+        <h2>NT027 Network Administrator</h2>
+        <p>We are looking for a proactive and detail-oriented Network Administrator to oversee and optimize our companys network infrastructure. This role includes managing servers, configuring network hardware, monitoring system performance, and implementing security protocols. The successful candidate will ensure the smooth operation of LAN, WAN, and other network segments, respond to network issues in a timely manner, and maintain comprehensive documentation for troubleshooting and upgrades.</p>
+        <p><strong>Salary range:</strong> $70,000 - $90,000</p>
+        <p><strong>Reports to:</strong> IT Manager</p>
 
-        <!-- Responsibilities section -->
-        <h3 id="orangered"><b>Key Responsibilities</b></h3>
+        <h3>Key Responsibilities</h3>
         <ul class="jobs-bullets">
-          <li>Bachelor's degree in Information Technology or related field</li>
-          <li>Experience with network protocols (TCP/IP, DNS, DHCP)</li>
-          <li>3+ years of experience in network administration</li>
+          <li>Manage and configure network hardware and software</li>
+          <li>Monitor network performance and security</li>
+          <li>Ensure reliable network connectivity</li>
         </ul>
 
-        <!-- Preferred qualifications -->
-        <h3 id="orangered"><b>Preferable Qualification</b></h3>
+        <h3>Preferred Qualifications</h3>
         <ul class="jobs-bullets">
-          <li>Certification success on CCNA or CompTIA Network+</li>
-          <li>Familiarity with network management tools</li>
+          <li>Certification in CCNA or CompTIA Network+</li>
+          <li>Experience with network management tools</li>
         </ul>
       </section>
 
-      <!-- Job listing for Data Analyst -->
+      <!-- Data Analyst -->
       <section class="job-box">
-        <h1>DA042 Data Analyst</h1>
-        <h2>We are seeking a Data Analyst...</h2>
-        <h2 id="orangered">Salary range: $65,000 - $85,000</h2>
-        <h2 id="lightcyan">Reports to: Business Intelligence Manager</h2>
+        <h2>DA042 Data Analyst</h2>
+        <p>We are seeking a Data Analyst to transform complex data into actionable insights that support strategic decision-making across the company. You will be responsible for collecting, analyzing, and interpreting large data sets, building visual dashboards, and presenting trends that help drive business performance. The ideal candidate will have strong analytical skills, attention to detail, and the ability to communicate findings effectively to both technical and non-technical stakeholders.</p>
+        <p><strong>Salary range:</strong> $65,000 - $85,000</p>
+        <p><strong>Reports to:</strong> Business Intelligence Manager</p>
 
-        <!-- Responsibilities -->
-        <h3 id="orangered">Key Responsibilities</h3>
+        <h3>Key Responsibilities</h3>
         <ul class="jobs-bullets">
           <li>Interpret data and analyze results using statistical techniques</li>
-          <li>Develop and maintain dashboards and reports</li>
-          <li>Identify trends and patterns in complex datasets</li>
-          <li>Work with teams to gather data requirements</li>
+          <li>Develop dashboards and reports</li>
+          <li>Identify trends in complex datasets</li>
         </ul>
 
-        <!-- Preferred qualifications -->
-        <h3 id="orangered">Preferable Qualifications</h3>
+        <h3>Preferred Qualifications</h3>
         <ul class="jobs-bullets">
-          <li>Bachelor degree in Statistics, Mathematics, or related field</li>
-          <li>Proficiency in SQL, Excel, and data visualization tools (e.g., Tableau, Power BI)</li>
-          <li>2+ years of experience in data analysis</li>
+          <li>Bachelors degree in Statistics, Mathematics, or related field</li>
+          <li>Proficiency in SQL, Excel, Tableau, or Power BI</li>
         </ul>
       </section>
 
-      <!-- Job listing for Cybersecurity Specialist -->
+      <!-- Cybersecurity Specialist -->
       <section class="job-box">
-        <h1>CS035 Cybersecurity Specialist</h2>
-        <h2>We are hiring a Cybersecurity Specialist...</h2>
-        <h2 id="orangered">Salary range: $90,000 - $115,000</h2>
-        <h2 id="lightcyan">Reports to: Chief Information Security Officer</h2>
+        <h2>CS035 Cybersecurity Specialist</h2>
+        <p>We are hiring a Cybersecurity Specialist to protect our digital infrastructure from cyber threats. The role involves continuous monitoring, assessment, and improvement of security protocols to ensure data integrity and confidentiality. The right candidate will be well-versed in identifying vulnerabilities, conducting penetration testing, and implementing threat prevention measures. This position requires fast thinking, technical expertise, and a deep understanding of cybersecurity trends and tools.</p>
+        <p><strong>Salary range:</strong> $90,000 - $115,000</p>
+        <p><strong>Reports to:</strong> Chief Information Security Officer</p>
 
-        <!-- Responsibilities -->
-        <h3 id="orangered">Key Responsibilities</h3>
+        <h3>Key Responsibilities</h3>
         <ul class="jobs-bullets">
           <li>Monitor systems for security breaches</li>
-          <li>Conduct vulnerability assessments and penetration testing</li>
+          <li>Conduct vulnerability assessments</li>
           <li>Implement security measures and controls</li>
-          <li>Respond to and investigate security incidents</li>
         </ul>
 
-        <!-- Required qualifications -->
-        <h3 id="orangered">Required Qualifications</h3>
+        <h3>Required Qualifications</h3>
         <ul class="jobs-bullets">
-          <li>Bachelor degree in Cybersecurity, Computer Science, or related field</li>
-          <li>Familiarity with firewalls, IDS/IPS, and antivirus software</li>
-          <li>2+ years of experience in cybersecurity or information security</li>
+          <li>Bachelors degree in Cybersecurity or related field</li>
+          <li>Familiarity with firewalls and antivirus software</li>
         </ul>
       </section>
 
-      <!-- Job listing for IT Support Technician -->
+      <!-- IT Support Technician -->
       <section class="job-box">
-        <h1>IT042 IT Support Technician</h1>
-        <h2>We are looking for a hands-on IT Support Technician...</h2>
-        <h2 id="orangered">Salary range: $50,000 - $65,000</h2>
-        <h2 id="lightcyan">Reports to: IT Manager</h2>
+        <h2>IT042 IT Support Technician</h2>
+        <p>We are looking for a hands-on IT Support Technician to provide first-level technical assistance to our staff. This role includes setting up devices, resolving technical issues, and maintaining software and hardware systems. A successful candidate will have a friendly attitude, strong problem-solving abilities, and a desire to improve the IT support experience for all users. You will serve as the first point of contact for technical help and be integral to ensuring operational continuity.</p>
+        <p><strong>Salary range:</strong> $50,000 - $65,000</p>
+        <p><strong>Reports to:</strong> IT Manager</p>
 
-        <!-- Responsibilities -->
-        <h3 id="orangered">Key Responsibilities</h3>
+        <h3>Key Responsibilities</h3>
         <ul class="jobs-bullets">
           <li>Troubleshoot hardware and software issues</li>
-          <li>Set up and configure workstations and devices</li>
-          <li>Provide support for operating systems and common applications</li>
-          <li>Maintain inventory of IT equipment and assist in upgrades</li>
+          <li>Set up workstations and devices</li>
         </ul>
 
-        <!-- Required qualifications -->
-        <h3 id="orangered">Required Qualifications</h3>
+        <h3>Required Qualifications</h3>
         <ul class="jobs-bullets">
-          <li>Associate or Bachelor degree in IT, Computer Science, or a related field</li>
-          <li>Knowledge of Windows and macOS environments</li>
-          <li>1+ years of experience in IT support or help desk roles</li>
+          <li>Associate/Bachelor degree in IT or related field</li>
+          <li>Experience with Windows/macOS</li>
         </ul>
       </section>
 
-      <!-- Job listing for Cloud Engineer -->
+      <!-- Cloud Engineer -->
       <section class="job-box">
-        <h1>CE403 Cloud Engineer</h1>
-        <h2>We are seeking a Cloud Engineer...</h2>
-        <h2 id="orangered">Salary range: $95,000 - $120,000</h2>
-        <h2 id="lightcyan">Reports to: Infrastructure Lead</h2>
+        <h2>CE403 Cloud Engineer</h2>
+        <p>We are looking for a Cloud Engineer to lead the design and deployment of scalable, secure, and high-performing cloud infrastructure. In this role, you will be responsible for architecting cloud-native applications, automating infrastructure with Infrastructure-as-Code (IaC), and ensuring cost-effective usage of cloud services. The ideal candidate will be experienced in platforms such as AWS, Azure, or Google Cloud, and have a strong background in DevOps practices, cloud security, and system automation.</p>
+        <p><strong>Salary range:</strong> $95,000 - $120,000</p>
+        <p><strong>Reports to:</strong> Infrastructure Lead</p>
 
-        <!-- Responsibilities -->
-        <h3 id="orangered">Key Responsibilities</h3>
+        <h3>Key Responsibilities</h3>
         <ul class="jobs-bullets">
           <li>Design and implement cloud-based solutions</li>
-          <li>Manage cloud resources for performance and cost-efficiency</li>
-          <li>Automate deployments using IaC tools like Terraform or CloudFormation</li>
-          <li>Ensure cloud security and compliance</li>
+          <li>Automate deployments with Terraform or CloudFormation</li>
         </ul>
 
-        <!-- Required qualifications -->
-        <h3 id="orangered">Required Qualifications</h3>
+        <h3>Required Qualifications</h3>
         <ul class="jobs-bullets">
-          <li>Bachelor degree in Computer Science or related field</li>
-          <li>Experience with AWS, Azure, or Google Cloud</li>
-          <li>2+ years of experience in cloud infrastructure or DevOps</li>
+          <li>Bachelors degree in Computer Science or related</li>
+          <li>Experience with AWS, Azure, or GCP</li>
         </ul>
       </section>
+    </section>
 
-    </section> <!-- End of job-container -->
+    <!-- Aside Section -->
+    <aside class="job-aside">
+      <h2>How to Apply</h2>
+      <p>Follow these steps to apply for a role at JLNV Solutions:</p>
+      <ol>
+        <li>Read the position descriptions above thoroughly.</li>
+        <li>Prepare a tailored resume and cover letter.</li>
+        <li>Email your application to <a href="mailto:info@jlnv.com.au">info@jlnv.com.au</a></li>
+        <li>Wait for a response from our hiring team.</li>
+      </ol>
+    </aside>
   </main>
 
-  <!-- Footer with contact email and Jira project link -->
-  <footer class="site-footer">
-    <h2><a href="mailto:info@jlnv.com.au">info@jlnv.com.au</a></h2>
-    <h2><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" alt="Jira Project" target="_blank">Jira Project</a></h2>
-  </footer>
+  <!-- Footer -->
+  <?php include 'footer.inc'; ?>
+  
 </body>
 </html>

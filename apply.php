@@ -151,9 +151,7 @@
   </main>   
 
   <!-- Footer Section -->
-  <footer class="site-footer">
-    <h2><a href="mailto:info@jlnv.com.au">info@jlnv.com.au</a></h2>
-    <h2><a href="https://votrnam.atlassian.net/jira/software/c/projects/NAM/boards/34/backlog?atlOrigin=eyJpIjoiODcwNWY1NDcyMTJmNDE0NGFmNDFkYjM0YzU4NWIxN2IiLCJwIjoiaiJ9" alt="Jira Project" target="_blank">Jira Project</a></h2>
-  </footer>
+  <?php include 'footer.inc'; ?>
+
 </body>
 </html>
