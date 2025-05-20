@@ -12,6 +12,9 @@ description: [html files it refers to is JLNV_part2_project]
 
 */
 
+.about-bullets ul li {
+  font-size: 5.5em;
+}
 /*  Header Styling */
 header img {
   width: 150px;
