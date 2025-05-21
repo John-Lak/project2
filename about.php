@@ -1,4 +1,4 @@
-<?php include 'header.inc'; ?>
+<<?php include 'header.inc'; ?>
 <head>
   <meta name="description" content="About JLNV Solutions">
   <meta name="keywords" content="About, mission, vision, team">
@@ -24,35 +24,40 @@
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-
-
 <body>
 
   <!--Main content area for the About page -->
   <main class="about_main">
     <aside>
-      <!-- Group photo and basic information about the group -->
-      <img src="images/group photo.JPG" alt="Group photo of JLNV members" class="prompt3">
+      <!-- Group photo wrapped in <figure> for accessibility -->
+      <figure>
+        <img src="images/group photo.JPG" alt="Group photo of JLNV members" class="prompt3">
+        <figcaption>JLNV Solutions Team</figcaption>
+      </figure>
+      
       <h1 id="about_us">About us</h1>
       <p>Programming Group, Wednesday 2 pm, JLNV</p>
       <p><strong><span id="special">Tutor:</span></strong> Nick</p>
-      <p>Members contribution to Project:</p>
+      <p>Members' contributions to Project:</p>
       
-      <!-- List of group members and their contributions -->
+      <!-- Nested list structure for contributions -->
       <ul class="about-bullets">
-        <li><p><strong>Nam Vo</strong> - Full stack, Network administrator and Data Analyst <span class="student-id">ID: 12345678</span></p></li>
-        
-        <ul>
-            <li>Used PHP to modularize and reuse common elements across the website.</li>
-            <li>Updated the About page and contributed to job descriptions.</li>
-            <li>Implemented key website enhancements to improve functionality and user experience.</li>
+        <li>
+          <p><strong>Nam Vo</strong> - Full stack developer, Network administrator, Data Analyst <span class="student-id">ID: 12345678</span></p>
+          <ul>
+            <li>Worked on front-end design, back-end API integration, and data analysis for user behavior.</li>
+            <li>Handled database management and set up the network infrastructure.</li>
+            <li>Ensured website scalability and optimized performance for a smooth user experience.</li>
           </ul>
-        <li><p><strong>John Lakshmalla</strong> - Full stack, Network administrator and Software Developer <span class="student-id">ID: 87654321</span></p></li>
-        <ul>
-            <li>Created the Expressions of Interest (EOI) table for capturing user applications.</li>
-            <li>Developed process_eoi.php to validate and add records securely into the EOI table.</li>
-            <li>Built manage.php to allow HR managers to query and manage EOI submissions effectively.</li>
+        </li>
+        <li>
+          <p><strong>John Lakshmalla</strong> - Full stack developer, Network administrator, Software developer <span class="student-id">ID: 106033196</span></p>
+          <ul>
+            <li>Contributed to front-end interface design, making it mobile responsive and user-friendly.</li>
+            <li>Developed back-end services, focusing on functionality and integration with the front end.</li>
+            <li>Implemented security features to ensure safe data transactions and user privacy.</li>
           </ul>
+        </li>
       </ul>
     </aside>
 
@@ -100,7 +105,6 @@
   </main>
   
   <?php include 'footer.inc'; ?>
-
 
 </body>
 </html>

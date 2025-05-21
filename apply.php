@@ -1,8 +1,8 @@
 <?php include 'header.inc'; ?>
 <head>
-  <meta name="description" content="About JLNV Solutions">
-  <meta name="keywords" content="About, mission, vision, team">
-  <title>About Page</title>
+  <meta name="description" content="Apply for a job at JLNV">
+  <meta name="keywords" content="Apply, application form, JLNV jobs">
+  <title>Apply Page</title>
 </head>
 
 <?php include 'nav.inc'; ?>
@@ -11,99 +11,146 @@
 <!--Moved all the footer to the footer.inc-->
 <!--Moved all the header to the header.inc-->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="About page for the company">
-  <meta name="keywords" content="Company, People, Contribution">
+  <meta name="description" content="Apply page for the company">
+  <meta name="keywords" content="Form filling">
   <meta name="author" content="John Lakshmalla, Nam Vo">
-  <title>About Page</title>
-  <!-- References to external CSS files -->
+  <title>Apply Page</title>
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-<body>
 
-  <!--Main content area for the About page -->
-  <main class="about_main">
-    <aside>
-      <!-- Group photo wrapped in <figure> for accessibility -->
-      <figure>
-        <img src="images/group photo.JPG" alt="Group photo of JLNV members" class="prompt3">
-        <figcaption>JLNV Solutions Team</figcaption>
-      </figure>
-      
-      <h1 id="about_us">About us</h1>
-      <p>Programming Group, Wednesday 2 pm, JLNV</p>
-      <p><strong><span id="special">Tutor:</span></strong> Nick</p>
-      <p>Members' contributions to Project:</p>
-      
-      <!-- Nested list structure for contributions -->
-      <ul class="about-bullets">
-        <li>
-          <p><strong>Nam Vo</strong> - Full stack developer, Network administrator, Data Analyst <span class="student-id">ID: 12345678</span></p>
-          <ul>
-            <li>Worked on front-end design, back-end API integration, and data analysis for user behavior.</li>
-            <li>Handled database management and set up the network infrastructure.</li>
-            <li>Ensured website scalability and optimized performance for a smooth user experience.</li>
-          </ul>
-        </li>
-        <li>
-          <p><strong>John Lakshmalla</strong> - Full stack developer, Network administrator, Software developer <span class="student-id">ID: 106033196</span></p>
-          <ul>
-            <li>Contributed to front-end interface design, making it mobile responsive and user-friendly.</li>
-            <li>Developed back-end services, focusing on functionality and integration with the front end.</li>
-            <li>Implemented security features to ensure safe data transactions and user privacy.</li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
+  <!-- Main content of the apply page -->
+  <main class="apply-box">
+    <header>
+      <h1>Job Application</h1> <!-- Page title -->
+    </header>
 
-    <!-- AI generated text section -->
-    <section>
-      <h1 id="members_page">Members interest</h1>
-      <table class="info-table"> 
-        <tr>
-          <th>Name</th>
-          <th>Programming Languages</th>
-          <th>Hobbies</th>
-          <th>Favourite movie</th>
-          <th>Music</th>
-          <th>Email</th>
-        </tr>
-        <tr>
-          <td>John</td>
-          <td>HTML, CSS, Ruby, C#, C++</td>
-          <td>Gaming, Gym</td>
-          <td>Star Wars</td>
-          <td>RnB</td>
-          <td>johnnylak16@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Nam</td>
-          <td>HTML, CSS, Ruby</td>
-          <td>Building, Mining</td>
-          <td>Star Trek</td>
-          <td>Classical</td>
-          <td>vonam@gmail.com</td>
-        </tr>
-      </table>
-    </section>
+    <!-- Job application form -->
+    <form method="post" novalidate="novalidate" action="https://localhost/project2/process_eoi.php">
 
-    <!-- Hometown descriptions of the members -->
-    <section>
-      <p id="hometown_description"><strong>Hometown Description:</strong></p>
+      <!-- Job Reference Selection -->
       <p>
-        <span id="color">Nam is from Ho Chi Minh City, Vietnam — </span>a busy and exciting city known for its history, street food, and old temples. He lived in District 7 for about 10 years before moving to Australia. His neighborhood was small, crowded, and a bit dirty, but full of friendly people. Every afternoon, he would hang out with his neighbors, play games, and enjoy his time. These moments were a big part of his childhood and something he still remembers fondly.
+        <label for="jobRef">Job reference Number: </label>
+        <select name="job ref" id="jobRef" required>
+          <option value="select">Select</option>
+          <option value="ar001">AR001</option>
+          <option value="nt027">NT027</option>
+          <option value="da042">DA042</option>
+          <option value="cs035">CS035</option>
+          <option value="it042">IT042</option>
+          <option value="ce403">CE403</option>
+        </select>
+      </p>
+
+      <!-- First Name Input -->
+      <p>
+        <label for="firstName">First Name: </label>
+        <input type="text" name="first name" id="firstName" placeholder="First Name" required maxlength="20" pattern="[A-Za-z]+">
+      </p>
+      
+      <!-- Last Name Input -->
+      <p>
+        <label for="lastName">Last Name:</label> 
+        <input type="text" name="last name" id="lastName" placeholder="Last Name" required maxlength="20" pattern="[A-Za-z]+">
+      </p>
+
+      <!-- Date of Birth Input -->
+      <p>
+        <label for="dob">Date of Birth: </label> 
+        <input type="date" name="date of birth" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required>
+      </p>
+
+      <!-- Gender Selection -->
+      <p>
+        <label>Gender: </label>
+        <section class="radio-group">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </section>
+      </p>
+
+      <!-- Street Address Input -->
+      <p>
+        <label for="street">Street Address: </label>
+        <input type="text" name="street address" id="street" required maxlength="40">
+      </p>
+
+      <!-- Suburb/Town Input -->
+      <p>
+        <label for="suburb">Suburb/Town: </label> 
+        <input type="text" name="suburb/town" id="suburb" required maxlength="40">
+      </p>
+
+      <!-- State Selection -->
+      <p>
+        <label for="state">State: </label>
+        <select name="state" id="state" required>
+          <option value="">State</option>
+          <option value="vic">VIC</option>
+          <option value="nsw">NSW</option>
+          <option value="qld">QLD</option>
+          <option value="nt">NT</option>
+          <option value="wa">WA</option>
+          <option value="sa">SA</option>
+          <option value="tas">TAS</option>
+          <option value="act">ACT</option>
+        </select>
+      </p>
+
+      <!-- Postcode Input -->
+      <p>
+        <label for="postcode">Postcode: </label>
+        <input type="text" name="postcode" id="postcode" placeholder="Postcode" required maxlength="4" pattern="\d{4}">
+      </p>
+
+      <!-- Email Input -->
+      <p>
+        <label for="email">Email Address: </label>
+        <input type="email" name="email" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+      </p>
+
+      <!-- Technical Skills Checkboxes -->
+      <p>
+        <label>Required Technical Skills: </label>
+        <section class="checkbox-group">
+          <input type="checkbox" id="ts1" name="category[]" value="technical skill 1" checked>
+          <label for="ts1">Technical Skill 1</label> 
+
+          <input type="checkbox" id="ts2" name="category[]" value="technical skill 2">
+          <label for="ts2">Technical Skill 2</label>  
+
+          <input type="checkbox" id="ts3" name="category[]" value="technical skill 3">
+          <label for="ts3">Technical Skill 3</label>
+
+          <input type="checkbox" id="ts4" name="category[]" value="technical skill 5">
+          <label for="ts4">Technical Skill 4</label>
+
+          <input type="checkbox" id="ts5" name="category[]" value="technical skill 5">
+          <label for="ts5">Technical Skill 5</label>
+        </section>
+      </p>
+
+      <!-- Other Skills Textarea -->
+      <p>
+        <label for="skill">Other Skills:</label>
       </p>
       <p>
-        <span id="color">John is from Hyderabad, India — </span>a city known for its rich history, culture, and technology. He was born and lived in Auckland, New Zealand for about 1 year before moving to Australia. His neighborhood was lively and full of friendly people. Every evening, he would play cricket with his friends and enjoy the local food. These moments were a big part of his childhood and something he still cherishes.
+        <textarea id="skill" name="skill" rows="4" placeholder="Write description of your other skills here..." cols="40"></textarea>
       </p>
-    </section>
-  </main>
-  
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit">
+    </form>
+  </main>   
+
+  <!-- Footer Section -->
   <?php include 'footer.inc'; ?>
 
 </body>
