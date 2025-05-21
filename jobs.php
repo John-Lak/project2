@@ -16,7 +16,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "project_db"; // 🔁 Replace with your actual DB name
+$dbname = "project_db";
 
 // Establish connection
 $conn = new mysqli($host, $user, $pass, $dbname);
@@ -55,7 +55,7 @@ if ($result && $result->num_rows > 0) {
 
         // Responsibilities
         $responsibilities = array_filter(array_map('trim', explode(',', $job['responsibilities'])));
-        echo "<h3>Key Responsibilities</h3><ul>";
+        echo "<h3>Key Responsibilities</h3><ul class='jobs-bullets'>";
         foreach ($responsibilities as $item) {
             echo "<li>$item</li>";
         }
@@ -63,7 +63,7 @@ if ($result && $result->num_rows > 0) {
 
         // Qualifications
         $qualifications = array_filter(array_map('trim', explode(',', $job['qualifications'])));
-        echo "<h3>Required Qualifications</h3><ul>";
+        echo "<h3>Required Qualifications</h3><ul class='jobs-bullets'>";
         foreach ($qualifications as $item) {
             echo "<li>$item</li>";
         }
