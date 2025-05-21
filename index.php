@@ -87,7 +87,7 @@
         </ul>
         <p>Be part of a team that is driving the next generation of connectivity. Explore our open roles and start your journey with JLNV Solutions today.</p>
         <!-- Link to job openings -->
-        <a href="jobs.html" class="job">View open jobs</a>
+        <a href="http://localhost/project2/jobs.php" class="job">View open jobs</a>
       </section>
 
     </article>
