@@ -7,7 +7,7 @@
 
 <?php include 'nav.inc'; ?>
 
-<!--Moved all the navigation menu to thenav.inc-->
+<!--Moved all the navigation menu to the nav.inc-->
 <!--Moved all the footer to the footer.inc-->
 <!--Moved all the header to the header.inc-->
 
@@ -43,7 +43,7 @@
       <!-- Nested list structure for contributions -->
       <ul class="about-bullets">
         <li>
-          <p><strong>Nam Vo</strong> - Full stack developer, Network administrator, Data Analyst <span class="student-id">ID: 12345678</span></p>
+          <p><strong>Nam Vo</strong> - Full stack developer, Network administrator, Data Analyst <span class="student-id">ID: 105914229</span></p>
           <ul>
             <li>Worked on front-end design, back-end API integration, and data analysis for user behavior.</li>
             <li>Handled database management and set up the network infrastructure.</li>

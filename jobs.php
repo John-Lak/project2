@@ -1,15 +1,5 @@
 <?php include 'header.inc'; ?>
 <?php include 'nav.inc'; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="Jobs page for the company">
-  <meta name="keywords" content="Jobs, job description, pay">
-  <meta name="author" content="John Lakshmalla, Nam Vo">
-  <title>Jobs Page</title>
-  <link href="styles/styles.css" rel="stylesheet">
-</head>
 
 <?php
 // Database connection details
