@@ -68,25 +68,6 @@ if (!$conn) {
     die("<p>Database connection failure</p>");
 }
 
-// Create table if not exists
-$table = "eoi";
-$create_query = "CREATE TABLE IF NOT EXISTS $table (
-    EOInumber INT AUTO_INCREMENT PRIMARY KEY,
-    JobRef VARCHAR(5),
-    FirstName VARCHAR(20),
-    LastName VARCHAR(20),
-    DOB VARCHAR(10),
-    Gender VARCHAR(10),
-    Address VARCHAR(40),
-    Suburb VARCHAR(40),
-    State VARCHAR(3),
-    Postcode VARCHAR(4),
-    Email VARCHAR(50),
-    Phone VARCHAR(15),
-    Skills TEXT
-);";
-mysqli_query($conn, $create_query);
-
 // Prepare and insert
 $skills_str = implode(", ", array_map('sanitize', $skills));
 $insert = "INSERT INTO $table 
