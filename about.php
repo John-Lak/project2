@@ -1,4 +1,4 @@
-<<?php include 'header.inc'; ?>
+<?php include 'header.inc'; ?>
 <head>
   <meta name="description" content="About JLNV Solutions">
   <meta name="keywords" content="About, mission, vision, team">

@@ -17,6 +17,8 @@
   </article>
 </main>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +30,7 @@
   <!-- References to external CSS files -->
   <link href="styles/styles.css" rel="stylesheet">
 </head>
+
 
 
   <!-- Main content of the homepage -->

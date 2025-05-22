@@ -22,6 +22,7 @@
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
+
   <!-- Main content of the apply page -->
   <main class="apply-box">
     <header>
@@ -120,19 +121,19 @@
         <label>Required Technical Skills: </label>
         <section class="checkbox-group">
           <input type="checkbox" id="ts1" name="category[]" value="technical skill 1" checked>
-          <label for="ts1">Technical Skill 1</label> 
+          <label for="ts1">Programming</label> 
 
           <input type="checkbox" id="ts2" name="category[]" value="technical skill 2">
-          <label for="ts2">Technical Skill 2</label>  
+          <label for="ts2">Data Analysis</label>  
 
           <input type="checkbox" id="ts3" name="category[]" value="technical skill 3">
-          <label for="ts3">Technical Skill 3</label>
+          <label for="ts3">Web Development</label>
 
           <input type="checkbox" id="ts4" name="category[]" value="technical skill 5">
-          <label for="ts4">Technical Skill 4</label>
+          <label for="ts4">Database Management</label>
 
           <input type="checkbox" id="ts5" name="category[]" value="technical skill 5">
-          <label for="ts5">Technical Skill 5</label>
+          <label for="ts5">Cloud Computing</label>
         </section>
       </p>
 

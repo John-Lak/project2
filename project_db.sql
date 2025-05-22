@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2025 at 03:35 AM
+-- Generation Time: May 22, 2025 at 10:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -55,7 +55,7 @@ CREATE TABLE `eoi` (
 
 CREATE TABLE `jobs` (
   `job_id` int(11) NOT NULL,
-  `code` varchar(10) NOT NULL,
+  `job_ref` varchar(10) NOT NULL,
   `title` varchar(100) NOT NULL,
   `salary_range` varchar(50) DEFAULT NULL,
   `reports_to` varchar(100) DEFAULT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE `jobs` (
 -- Dumping data for table `jobs`
 --
 
-INSERT INTO `jobs` (`job_id`, `code`, `title`, `salary_range`, `reports_to`, `responsibilities`, `qualifications`, `full_description`) VALUES
+INSERT INTO `jobs` (`job_id`, `job_ref`, `title`, `salary_range`, `reports_to`, `responsibilities`, `qualifications`, `full_description`) VALUES
 (1, 'AR001', 'Software Engineer', '$80,000 - $100,000', 'Senior Software Engineer', 'Develop and maintain software applications; Collaborate with cross-functional teams; Participate in code reviews; Troubleshoot and debug issues', 'Bachelors degree in Computer Science or related field; Strong programming skills in Java, Python, or C++; 2+ years of experience in software development', 'We are seeking a skilled and passionate Software Engineer to join our development team. This role involves designing, building, and maintaining high-quality software applications that support the operations and goals of our organization. The ideal candidate thrives in collaborative environments, embraces continuous learning, and is committed to writing clean, efficient, and scalable code. You will be involved in all stages of the software development lifecycle, from concept and design to testing and deployment.'),
 (2, 'NT027', 'Network Administrator', '$70,000 - $90,000', 'IT Manager', 'Manage network infrastructure and servers; Configure and monitor network hardware; Implement security protocols; Troubleshoot connectivity issues', 'Bachelors degree in Information Technology or related field; Experience with network protocols (TCP/IP, DNS, DHCP); 3+ years of experience in network administration', 'We are looking for a proactive and detail-oriented Network Administrator to oversee and optimize our company’s network infrastructure. This role includes managing servers, configuring network hardware, monitoring system performance, and implementing security protocols. The successful candidate will ensure the smooth operation of LAN, WAN, and other network segments, respond to network issues in a timely manner, and maintain comprehensive documentation for troubleshooting and upgrades.'),
 (3, 'DA042', 'Data Analyst', '$65,000 - $85,000', 'Business Intelligence Manager', 'Interpret data and analyze results using statistical techniques; Develop and maintain dashboards and reports; Identify trends and patterns; Gather data requirements from stakeholders', 'Bachelor degree in Statistics, Mathematics, or related field; Proficiency in SQL, Excel, and data visualization tools (e.g., Tableau, Power BI); 2+ years of experience in data analysis', 'We are seeking a Data Analyst to transform complex data into actionable insights that support strategic decision-making across the company. You will be responsible for collecting, analyzing, and interpreting large data sets, building visual dashboards, and presenting trends that help drive business performance. The ideal candidate will have strong analytical skills, attention to detail, and the ability to communicate findings effectively to both technical and non-technical stakeholders.'),

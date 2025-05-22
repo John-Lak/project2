@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: apply.html");
+    header("Location: http://localhost/project2/apply.php");
     exit();
 }
 
@@ -20,7 +20,7 @@ $dob = sanitize($_POST["dob"] ?? '');
 $gender = sanitize($_POST["gender"] ?? '');
 $address = sanitize($_POST["address"] ?? '');
 $suburb = sanitize($_POST["suburb"] ?? '');
-$state = sanitize($_POST["state"] ?? '');
+$state = strtoupper(sanitize($_POST["state"] ?? ''));
 $postcode = sanitize($_POST["postcode"] ?? '');
 $email = sanitize($_POST["email"] ?? '');
 $phone = sanitize($_POST["phone"] ?? '');
@@ -44,11 +44,11 @@ $state_postcode_ranges = [
     "VIC" => [3000, 3999],
     "NSW" => [2000, 2999],
     "QLD" => [4000, 4999],
-    "NT"  => [0800, 0899],
+    "NT"  => [800, 899],
     "WA"  => [6000, 6999],
     "SA"  => [5000, 5999],
     "TAS" => [7000, 7999],
-    "ACT" => [0200, 0299]
+    "ACT" => [200, 299]
 ];
 $pc = (int)$postcode;
 $range = $state_postcode_ranges[$state];
@@ -98,7 +98,7 @@ if (mysqli_query($conn, $insert)) {
     $eoi_id = mysqli_insert_id($conn);
     echo "<h2>Application Received</h2>";
     echo "<p>Your EOI number is: <strong>$eoi_id</strong></p>";
-    echo "<a href='apply.html'>Submit another application</a>";
+    echo "<a href='http://localhost/project2/apply.php'>Submit another application</a>";
 } else {
     echo "<p>Error submitting application.</p>";
 }

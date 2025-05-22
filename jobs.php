@@ -39,7 +39,7 @@ if ($result && $result->num_rows > 0) {
     while ($job = $result->fetch_assoc()) {
         echo "<section class='job-box'>";
         echo "<h2>{$job['job_ref']} - {$job['title']}</h2>";
-        echo "<p><strong>Description:</strong> {$job['description']}</p>";
+        echo "<p><strong>Description:</strong> {$job['full_description']}</p>";
         echo "<p><strong>Salary range:</strong> {$job['salary_range']}</p>";
         echo "<p><strong>Reports to:</strong> {$job['reports_to']}</p>";
 
