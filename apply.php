@@ -22,7 +22,6 @@
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-
   <!-- Main content of the apply page -->
   <main class="apply-box">
     <header>
