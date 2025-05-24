@@ -129,7 +129,7 @@
           <input type="checkbox" id="ts3" name="category[]" value="technical skill 3">
           <label for="ts3">Web Development</label>
 
-          <input type="checkbox" id="ts4" name="category[]" value="technical skill 5">
+          <input type="checkbox" id="ts4" name="category[]" value="technical skill 4">
           <label for="ts4">Database Management</label>
 
           <input type="checkbox" id="ts5" name="category[]" value="technical skill 5">
