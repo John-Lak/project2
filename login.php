@@ -68,6 +68,7 @@
             <input type="password" id="password" name="password" required>
 
             <input type="submit" value="Login">
+            <input type="submit" name="action" value="Manager" formaction="manager.php">
         </form>
     </section>
     <?php 
