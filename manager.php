@@ -177,9 +177,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     Status:
     <select name="status">
         <option value="New">New</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Finalised">Finalised</option>
-        <option value="Rejected">Rejected</option>
+        <option value="Current">Current</option>
+        <option value="Final">Final</option>
     </select>
     <input type="submit" value="Update Status">
 </form>
