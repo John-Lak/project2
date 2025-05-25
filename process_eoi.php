@@ -57,7 +57,7 @@ if ($pc < $range[0] || $pc > $range[1]) $errors[] = "Postcode does not match sta
 if ($errors) {
     echo "<h2>Submission Error</h2><ul>";
     foreach ($errors as $error) echo "<li>$error</li>";
-    echo "</ul><a href='apply.html'>Go back</a>";
+    echo "</ul><a href='apply.php'>Go back</a>";
     exit();
 }
 
