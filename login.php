@@ -68,8 +68,8 @@
             <input type="password" id="password" name="password" required>
 
             <input type="submit" value="Login">
-            <input type="submit" name="action" value="Manager" formaction="manager.php">
         </form>
+            <h1 class="menu"><a href="manage.php">Manager</a></h1>
     </section>
     <?php 
     include 'footer.inc';

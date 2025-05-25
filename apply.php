@@ -25,7 +25,7 @@
   <form method="post" novalidate="novalidate" action="process_eoi.php">
 
     <p>
-      <label for="jobRef">Job reference Number: </label>
+      <label for="jobRef">Job Reference Number:</label>
       <select name="jobref" id="jobRef" required>
         <option value="">Select</option>
         <option value="AR001">AR001</option>
@@ -38,22 +38,22 @@
     </p>
 
     <p>
-      <label for="firstName">First Name: </label>
+      <label for="firstName">First Name:</label>
       <input type="text" name="firstname" id="firstName" placeholder="First Name" required maxlength="20" pattern="[A-Za-z]+">
     </p>
 
     <p>
-      <label for="lastName">Last Name:</label> 
+      <label for="lastName">Last Name:</label>
       <input type="text" name="lastname" id="lastName" placeholder="Last Name" required maxlength="20" pattern="[A-Za-z]+">
     </p>
 
     <p>
-      <label for="dob">Date of Birth: </label> 
-      <input type="date" name="date of birth" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" required>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" name="dob" id="dob" required>
     </p>
 
     <p>
-      <label>Gender: </label>
+      <label>Gender:</label>
       <section class="radio-group">
         <input type="radio" id="male" name="gender" value="male" required>
         <label for="male">Male</label>
@@ -63,17 +63,17 @@
     </p>
 
     <p>
-      <label for="street">Street Address: </label>
+      <label for="street">Street Address:</label>
       <input type="text" name="address" id="street" required maxlength="40">
     </p>
 
     <p>
-      <label for="suburb">Suburb/Town: </label> 
+      <label for="suburb">Suburb/Town:</label>
       <input type="text" name="suburb" id="suburb" required maxlength="40">
     </p>
 
     <p>
-      <label for="state">State: </label>
+      <label for="state">State:</label>
       <select name="state" id="state" required>
         <option value="">State</option>
         <option value="VIC">VIC</option>
@@ -88,22 +88,22 @@
     </p>
 
     <p>
-      <label for="postcode">Postcode: </label>
+      <label for="postcode">Postcode:</label>
       <input type="text" name="postcode" id="postcode" required maxlength="4" pattern="\d{4}">
     </p>
 
     <p>
-      <label for="email">Email Address: </label>
-      <input type="email" name="email" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+      <label for="email">Email Address:</label>
+      <input type="email" name="email" id="email" required>
     </p>
 
     <p>
       <label for="phone">Phone Number:</label>
-      <input type="text" name="phone" id="phone" required maxlength="12" pattern="[0-9 ]{8,12}">
+      <input type="text" name="phone" id="phone" required maxlength="12" pattern="[0-9 ]{8,12}" placeholder="e.g. 0412 345 678">
     </p>
 
     <p>
-      <label>Required Technical Skills: </label>
+      <label>Required Technical Skills:</label>
       <section class="checkbox-group">
         <input type="checkbox" id="ts1" name="skills[]" value="Programming" checked>
         <label for="ts1">Programming</label> 
