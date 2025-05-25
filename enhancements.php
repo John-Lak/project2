@@ -32,6 +32,10 @@ Sessions are used to track logged-in status securely.
 This restricts sensitive management functions to authorized personnel only.
 </p>
 
-
+<h2>4. Login attempts</h2>
+<p>
+Have access to the web site disabled for user a period of time on, say, three or more
+invalid login attempts.
+</p>
 </body>
 </html>
