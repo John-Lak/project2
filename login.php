@@ -1,44 +1,76 @@
 <?php
-require 'settings.php';
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Check for lockout
-    $check_attempts = $conn->prepare("SELECT COUNT(*) FROM login_attempts WHERE username = ? AND attempt_time > NOW() - INTERVAL 15 MINUTE");
-    $check_attempts->bind_param("s", $username);
-    $check_attempts->execute();
-    $check_attempts->bind_result($attempts);
-    $check_attempts->fetch();
-    $check_attempts->close();
-
-    if ($attempts >= 3) {
-        echo "Too many login attempts. Try again later.";
-        exit;
-    }
-
-    $stmt = $conn->prepare("SELECT password_hash FROM managers WHERE username=?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->bind_result($password_hash);
-    
-    if ($stmt->fetch() && password_verify($password, $password_hash)) {
-        $_SESSION['username'] = $username;
-        header("Location: manage.php");
-        exit;
-    } else {
-        $log_attempt = $conn->prepare("INSERT INTO login_attempts (username, attempt_time) VALUES (?, NOW())");
-        $log_attempt->bind_param("s", $username);
-        $log_attempt->execute();
-        echo "Invalid login.";
-    }
-}
+    session_start();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login page example">
+    <meta name="keywords" content="login form, CSS, responsive design">
+    <meta name="author" content="JL, NV">
+    <title>JLNV Management System</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <style>
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #d64c6c;
+            color: #fff;
+        }
+        .error {
+            color: #d64c6c;
+            background-color: #fde5e8;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <?php 
+        include 'header.inc';
+    ?>
+    <section id="login-main">
+        <h1>Login</h1>
+        <?php
+            if(isset($_SESSION['error'])){
+                echo '<div>' .$_SESSION['error']. '</div>';
+                unset($_SESSION['error']);
+            }
+        ?>
+        <form action="process_login.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-<form method="post">
-    Username: <input name="username"><br>
-    Password: <input type="password" name="password"><br>
-    <button type="submit">Login</button>
-</form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </section>
+    <?php 
+    include 'footer.inc';
+    ?>
+</body>
+</html>

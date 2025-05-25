@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: http://localhost/project2/apply.php");
+    header("Location: apply.php");
     exit();
 }
 
@@ -79,7 +79,7 @@ if (mysqli_query($conn, $insert)) {
     $eoi_id = mysqli_insert_id($conn);
     echo "<h2>Application Received</h2>";
     echo "<p>Your EOI number is: <strong>$eoi_id</strong></p>";
-    echo "<a href='http://localhost/project2/apply.php'>Submit another application</a>";
+    echo "<a href='apply.php'>Submit another application</a>";
 } else {
     echo "<p>Error submitting application.</p>";
 }
