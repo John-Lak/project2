@@ -50,6 +50,7 @@
 <body>
     <?php 
         include 'header.inc';
+        include 'nav.inc';
     ?>
     <section id="login-main">
         <h1>Login</h1>

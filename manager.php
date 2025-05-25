@@ -1,5 +1,5 @@
 <?php
-require_once("settings.php"); // $host, $user, $pwd, $sql_db
+require_once("settings.php"); // Includes $host, $username, $password, $database
 
 $conn = @mysqli_connect($host, $username, $password, $database);
 if (!$conn) {
@@ -8,7 +8,7 @@ if (!$conn) {
 
 function printResults($result) {
     if (mysqli_num_rows($result) > 0) {
-        echo "<table border='1'><tr>";
+        echo "<table border='1' cellpadding='5'><tr>";
         while ($fieldinfo = mysqli_fetch_field($result)) {
             echo "<th>{$fieldinfo->name}</th>";
         }
@@ -26,7 +26,7 @@ function printResults($result) {
     }
 }
 
-// Handle forms
+// Handle form submissions
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $action = $_POST["action"];
 
@@ -87,59 +87,102 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manage EOIs</title>
+    <title>EOI Management Panel</title>
     <style>
-        body { font-family: sans-serif; margin: 20px; }
-        form { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f7f7f7;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        h1 {
+            color: #222;
+        }
+        form {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #ccc;
+            width: fit-content;
+        }
+        input[type="text"], input[type="number"], select {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 6px 12px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+        }
+        th {
+            background-color: #eee;
+        }
     </style>
 </head>
 <body>
-    <h1>EOI Management Panel</h1>
 
-    <!-- List all EOIs -->
-    <form method="post">
-        <input type="hidden" name="action" value="list_all">
-        <input type="submit" value="List All EOIs">
-    </form>
+<nav>
+    <a href="index.php">Home</a>
+    <a href="manager.php">Manager Panel</a>
+    <a href="logout.php">Logout</a>
+</nav>
 
-    <!-- Search by job reference -->
-    <form method="post">
-        <h3>Search EOIs by Job Reference</h3>
-        <input type="hidden" name="action" value="search_jobref">
-        Job Ref: <input type="text" name="jobref" required>
-        <input type="submit" value="Search">
-    </form>
+<h1>EOI Management Panel</h1>
 
-    <!-- Search by applicant name -->
-    <form method="post">
-        <h3>Search EOIs by Applicant Name</h3>
-        <input type="hidden" name="action" value="search_name">
-        First Name: <input type="text" name="firstname">
-        Last Name: <input type="text" name="lastname">
-        <input type="submit" value="Search">
-    </form>
+<!-- List all EOIs -->
+<form method="post">
+    <input type="hidden" name="action" value="list_all">
+    <input type="submit" value="List All EOIs">
+</form>
 
-    <!-- Delete EOIs by job reference -->
-    <form method="post" onsubmit="return confirm('Are you sure you want to delete all EOIs with this job reference?');">
-        <h3>Delete EOIs by Job Reference</h3>
-        <input type="hidden" name="action" value="delete_jobref">
-        Job Ref: <input type="text" name="jobref_del" required>
-        <input type="submit" value="Delete">
-    </form>
+<!-- Search by job reference -->
+<form method="post">
+    <h3>Search EOIs by Job Reference</h3>
+    <input type="hidden" name="action" value="search_jobref">
+    Job Ref: <input type="text" name="jobref" required>
+    <input type="submit" value="Search">
+</form>
 
-    <!-- Update EOI status -->
-    <form method="post">
-        <h3>Update EOI Status</h3>
-        <input type="hidden" name="action" value="update_status">
-        EOI Number: <input type="number" name="eoi_id" required>
-        Status:
-        <select name="status">
-            <option value="New">New</option>
-            <option value="In Progress">In Progress</option>
-            <option value="Finalised">Finalised</option>
-            <option value="Rejected">Rejected</option>
-        </select>
-        <input type="submit" value="Update Status">
-    </form>
+<!-- Search by applicant name -->
+<form method="post">
+    <h3>Search EOIs by Applicant Name</h3>
+    <input type="hidden" name="action" value="search_name">
+    First Name: <input type="text" name="firstname">
+    Last Name: <input type="text" name="lastname">
+    <input type="submit" value="Search">
+</form>
+
+<!-- Delete EOIs by job reference -->
+<form method="post" onsubmit="return confirm('Are you sure you want to delete all EOIs with this job reference?');">
+    <h3>Delete EOIs by Job Reference</h3>
+    <input type="hidden" name="action" value="delete_jobref">
+    Job Ref: <input type="text" name="jobref_del" required>
+    <input type="submit" value="Delete">
+</form>
+
+<!-- Update EOI status -->
+<form method="post">
+    <h3>Update EOI Status</h3>
+    <input type="hidden" name="action" value="update_status">
+    EOI Number: <input type="number" name="eoi_id" required>
+    Status:
+    <select name="status">
+        <option value="New">New</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Finalised">Finalised</option>
+        <option value="Rejected">Rejected</option>
+    </select>
+    <input type="submit" value="Update Status">
+</form>
+
 </body>
 </html>

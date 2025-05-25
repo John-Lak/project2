@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit;
             } else {
                 // Redirect regular users to their welcome page
-                header('Location: welcome.php');
+                header('Location: index.php');
                 exit;
             }
         }
