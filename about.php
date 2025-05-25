@@ -32,7 +32,6 @@
       <!-- Group photo wrapped in <figure> for accessibility -->
       <figure>
         <img src="images/group photo.JPG" alt="Group photo of JLNV members" class="prompt3">
-        <figcaption>JLNV Solutions Team</figcaption>
       </figure>
       
       <h1 id="about_us">About us</h1>
