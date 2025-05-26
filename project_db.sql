@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2025 at 02:31 PM
+-- Generation Time: May 26, 2025 at 09:09 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -96,7 +96,7 @@ CREATE TABLE `managers` (
 --
 
 INSERT INTO `managers` (`id`, `username`, `password_hash`) VALUES
-(1, 'Admin', '$2y$10$MCRtKMs7x/QawAq3NHo8Qea3k/rQdHCrvCuXb5Cs9BDZpKqh/S.eu');
+(1, 'admin', '$2y$10$RabgjvNARrhZ8WfkwSVLCu.lEzyAlvgYKO/3dr0GiZKSyrB9CUIve');
 
 -- --------------------------------------------------------
 
@@ -153,7 +153,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `eoi`
 --
 ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `jobs`
