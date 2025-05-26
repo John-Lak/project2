@@ -58,8 +58,13 @@
         </form>
 
         <!-- Optional link to manager panel -->
+
+        
+        <div>
         <h1 class="menu"><a href="manage.php">Manager</a></h1>
+       
     </section>
+
 
     <?php 
         include 'footer.inc'; // Include footer HTML

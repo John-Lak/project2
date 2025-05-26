@@ -14,7 +14,9 @@ description: [html files it refers to is JLNV_part2_project]
 
 
 
-/* styles/eoi_management.css */
+
+
+
 
 
 
@@ -133,6 +135,7 @@ body {
 .menu {
   display: inline-block;
   padding: 0px 50px;
+  
 }
 
 .menu a {
