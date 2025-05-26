@@ -12,6 +12,57 @@ description: [html files it refers to is JLNV_part2_project]
 
 */
 
+
+
+/* styles/eoi_management.css */
+
+
+
+/* ======= Login Page Styles ======= */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+input[type="submit"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d64c6c;
+  color: #fff;
+}
+.error {
+  color: #d64c6c;
+  background-color: #fde5e8;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.success {
+  color: #2e7d32;
+  background-color: #d0f0d0;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+/* =============== */
+
+
+
 .about-bullets ul li {
   font-size: 1.3em;
 }

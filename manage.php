@@ -1,18 +1,22 @@
 <?php
-require_once("settings.php"); // Includes $host, $username, $password, $database
+require_once("settings.php"); // Load DB connection settings
 
+// Connect to MySQL database
 $conn = @mysqli_connect($host, $username, $password, $database);
 if (!$conn) {
-    die("<p>Connection failed: " . mysqli_connect_error() . "</p>");
+    die("<p>Connection failed: " . mysqli_connect_error() . "</p>"); // Stop if connection fails
 }
 
+// Function to display query results as an HTML table
 function printResults($result) {
     if (mysqli_num_rows($result) > 0) {
         echo "<table border='1' cellpadding='5'><tr>";
+        // Print table headers
         while ($fieldinfo = mysqli_fetch_field($result)) {
             echo "<th>{$fieldinfo->name}</th>";
         }
         echo "</tr>";
+        // Print each row of data
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             foreach ($row as $val) {
@@ -22,15 +26,16 @@ function printResults($result) {
         }
         echo "</table>";
     } else {
-        echo "<p>No results found.</p>";
+        echo "<p>No results found.</p>"; // If no rows returned
     }
 }
 
-// Handle form submissions
+// Handle form submissions when the page posts data
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = $_POST["action"];
+    $action = $_POST["action"]; // Determine which form was submitted
 
     if ($action === "list_all") {
+        // List all EOIs in the database
         $query = "SELECT * FROM eoi";
         $result = mysqli_query($conn, $query);
         echo "<h2>All EOIs</h2>";
@@ -38,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     elseif ($action === "search_jobref") {
+        // Search EOIs by Job Reference
         $jobref = mysqli_real_escape_string($conn, $_POST["jobref"]);
         $query = "SELECT * FROM eoi WHERE JobRef='$jobref'";
         $result = mysqli_query($conn, $query);
@@ -46,11 +52,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     elseif ($action === "search_name") {
+        // Search EOIs by applicant first and/or last name
         $firstname = mysqli_real_escape_string($conn, trim($_POST["firstname"]));
         $lastname = mysqli_real_escape_string($conn, trim($_POST["lastname"]));
         $conditions = [];
         if ($firstname) $conditions[] = "FirstName LIKE '%$firstname%'";
         if ($lastname)  $conditions[] = "LastName LIKE '%$lastname%'";
+        
         if (!empty($conditions)) {
             $query = "SELECT * FROM eoi WHERE " . implode(" AND ", $conditions);
             $result = mysqli_query($conn, $query);
@@ -62,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     elseif ($action === "delete_jobref") {
+        // Delete EOIs by Job Reference number
         $jobref = mysqli_real_escape_string($conn, $_POST["jobref_del"]);
         $query = "DELETE FROM eoi WHERE JobRef='$jobref'";
         if (mysqli_query($conn, $query)) {
@@ -72,6 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     elseif ($action === "update_status") {
+        // Update the Status field for a specific EOI by ID
         $eoi_id = intval($_POST["eoi_id"]);
         $status = mysqli_real_escape_string($conn, $_POST["status"]);
         $query = "UPDATE eoi SET Status='$status' WHERE EOInumber=$eoi_id";
@@ -88,49 +98,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html>
 <head>
     <title>EOI Management Panel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f7f7f7;
-        }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        h1 {
-            color: #222;
-        }
-        form {
-            margin-bottom: 30px;
-            padding: 15px;
-            background: #fff;
-            border: 1px solid #ccc;
-            width: fit-content;
-        }
-        input[type="text"], input[type="number"], select {
-            margin: 5px 0;
-            padding: 5px;
-        }
-        input[type="submit"] {
-            margin-top: 10px;
-            padding: 6px 12px;
-        }
-        table {
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: #fff;
-        }
-        th {
-            background-color: #eee;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/eoi_management.css"> <!-- External CSS -->
 </head>
 <body>
 
 <nav>
+    <!-- Navigation links -->
     <a href="index.php">Home</a>
     <a href="manager.php">Manager Panel</a>
     <a href="logout.php">Logout</a>
@@ -138,13 +111,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <h1>EOI Management Panel</h1>
 
-<!-- List all EOIs -->
+<!-- Form to list all EOIs -->
 <form method="post">
     <input type="hidden" name="action" value="list_all">
     <input type="submit" value="List All EOIs">
 </form>
 
-<!-- Search by job reference -->
+<!-- Form to search EOIs by Job Reference -->
 <form method="post">
     <h3>Search EOIs by Job Reference</h3>
     <input type="hidden" name="action" value="search_jobref">
@@ -152,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input type="submit" value="Search">
 </form>
 
-<!-- Search by applicant name -->
+<!-- Form to search EOIs by applicant name -->
 <form method="post">
     <h3>Search EOIs by Applicant Name</h3>
     <input type="hidden" name="action" value="search_name">
@@ -161,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input type="submit" value="Search">
 </form>
 
-<!-- Delete EOIs by job reference -->
+<!-- Form to delete EOIs by Job Reference -->
 <form method="post" onsubmit="return confirm('Are you sure you want to delete all EOIs with this job reference?');">
     <h3>Delete EOIs by Job Reference</h3>
     <input type="hidden" name="action" value="delete_jobref">
@@ -169,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <input type="submit" value="Delete">
 </form>
 
-<!-- Update EOI status -->
+<!-- Form to update EOI status -->
 <form method="post">
     <h3>Update EOI Status</h3>
     <input type="hidden" name="action" value="update_status">

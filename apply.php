@@ -1,29 +1,26 @@
-<?php include 'header.inc'; ?>
-<head>
-  <meta name="description" content="Apply for a job at JLNV">
-  <meta name="keywords" content="Apply, application form, JLNV jobs">
-  <title>Apply Page</title>
-</head>
-<?php include 'nav.inc'; ?>
+<?php include 'header.inc'; ?> <!-- Shared header content -->
+<?php include 'nav.inc'; ?>    <!-- Shared navigation bar -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Apply page for the company">
-  <meta name="keywords" content="Form filling">
+  <meta name="description" content="Apply for a job at JLNV">
+  <meta name="keywords" content="Apply, application form, JLNV jobs">
   <meta name="author" content="John Lakshmalla, Nam Vo">
   <title>Apply Page</title>
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
+<body>
 <main class="apply-box">
   <header>
     <h1>Job Application</h1>
   </header>
 
-  <form method="post" novalidate="novalidate" action="process_eoi.php">
-
+  <form method="post" novalidate action="process_eoi.php">
+    
+    <!-- Job Reference Dropdown -->
     <p>
       <label for="jobRef">Job Reference Number:</label>
       <select name="jobref" id="jobRef" required>
@@ -37,6 +34,7 @@
       </select>
     </p>
 
+    <!-- Personal Information -->
     <p>
       <label for="firstName">First Name:</label>
       <input type="text" name="firstname" id="firstName" placeholder="First Name" required maxlength="20" pattern="[A-Za-z]+">
@@ -52,16 +50,19 @@
       <input type="date" name="dob" id="dob" required>
     </p>
 
+    <!-- Gender Radio Buttons -->
     <p>
       <label>Gender:</label>
       <section class="radio-group">
         <input type="radio" id="male" name="gender" value="male" required>
         <label for="male">Male</label>
+
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label>
       </section>
     </p>
 
+    <!-- Address Information -->
     <p>
       <label for="street">Street Address:</label>
       <input type="text" name="address" id="street" required maxlength="40">
@@ -92,6 +93,7 @@
       <input type="text" name="postcode" id="postcode" required maxlength="4" pattern="\d{4}">
     </p>
 
+    <!-- Contact Information -->
     <p>
       <label for="email">Email Address:</label>
       <input type="email" name="email" id="email" required>
@@ -102,6 +104,7 @@
       <input type="text" name="phone" id="phone" required maxlength="12" pattern="[0-9 ]{8,12}" placeholder="e.g. 0412 345 678">
     </p>
 
+    <!-- Technical Skills (Checkboxes) -->
     <p>
       <label>Required Technical Skills:</label>
       <section class="checkbox-group">
@@ -122,6 +125,7 @@
       </section>
     </p>
 
+    <!-- Other Skills -->
     <p>
       <label for="skill">Other Skills:</label>
     </p>
@@ -129,10 +133,11 @@
       <textarea id="skill" name="other_skills" rows="4" cols="40" placeholder="Write description of your other skills here..."></textarea>
     </p>
 
+    <!-- Submit Button -->
     <input type="submit" value="Submit">
   </form>
 </main>
 
-<?php include 'footer.inc'; ?>
+<?php include 'footer.inc'; ?> <!-- Shared footer -->
 </body>
 </html>
