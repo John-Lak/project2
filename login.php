@@ -18,7 +18,7 @@
         include 'nav.inc';    // Include navigation menu bar
     ?>
     
-    <section id="login-main">
+    <section id="login-main" class="login-box"> <!-- Main section for login form -->
         <h1>Login</h1>
 
         <?php

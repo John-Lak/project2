@@ -13,13 +13,6 @@ description: [html files it refers to is JLNV_part2_project]
 */
 
 
-
-
-
-
-
-
-
 /* ======= Login Page Styles ======= */
 
 form {
@@ -479,6 +472,23 @@ input[type="submit"]:hover {
 }
 
 .apply-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
+  transition: all 0.3s ease;
+}
+
+/*  Login Box Styling */
+.login-box {
+  border: 5px solid #5ecdf8;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #003a5d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 45%;
+}
+
+.login-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(94, 205, 248, 0.3);
   transition: all 0.3s ease;
