@@ -108,29 +108,25 @@
 <p>
   <label>Required Technical Skills:</label>
   <section class="checkbox-group">
-    <div class="checkbox-item">
+    <div class="checkbox-row">
       <input type="checkbox" id="ts1" name="skills[]" value="Programming" checked>
-      <label for="ts1">Programming</label>
-    </div>
-    <div class="checkbox-item">
+      <label for="ts1">Programming</label> 
+
       <input type="checkbox" id="ts2" name="skills[]" value="Data Analysis">
-      <label for="ts2">Data Analysis</label>
-    </div>
-    <div class="checkbox-item">
+      <label for="ts2">Data Analysis</label>  
+
       <input type="checkbox" id="ts3" name="skills[]" value="Web Development">
       <label for="ts3">Web Development</label>
     </div>
-    <div class="checkbox-item">
+    <div class="checkbox-row">
       <input type="checkbox" id="ts4" name="skills[]" value="Database Management">
       <label for="ts4">Database Management</label>
-    </div>
-    <div class="checkbox-item">
+
       <input type="checkbox" id="ts5" name="skills[]" value="Cloud Computing">
       <label for="ts5">Cloud Computing</label>
     </div>
   </section>
 </p>
-
 
     <!-- Other Skills -->
     <p>

@@ -130,31 +130,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/*  Checkbox Styling */
-.checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 400px; /* optional, control width */
-  gap: 10px;
-}
-
-.checkbox-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-/* Make first 3 checkboxes take 1/3 width each (3 in a row) */
-.checkbox-item:nth-child(-n+3) {
-  flex: 1 1 calc(33.33% - 10px);
-}
-
-/* Make last 2 checkboxes take 1/2 width each (2 in a row) */
-.checkbox-item:nth-child(n+4) {
-  flex: 1 1 calc(50% - 10px);
-}
-
-
 /*  About Us Section text styling */
 #about_us {
   font-size: 48px;
@@ -376,6 +351,20 @@ input[type="checkbox"] + label {
   margin-right: 20px;
   white-space: nowrap;
 }
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 
 /* AI generated Submit Button Styling */
 input[type="submit"] {
