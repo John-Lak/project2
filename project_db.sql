@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 02:17 PM
+-- Generation Time: May 26, 2025 at 03:16 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,15 +43,6 @@ CREATE TABLE `eoi` (
   `Skills` text NOT NULL,
   `Status` enum('New','Current','Final') DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `eoi`
---
-
-INSERT INTO `eoi` (`EOInumber`, `JobRef`, `FirstName`, `LastName`, `DOB`, `Gender`, `Address`, `Suburb`, `State`, `Postcode`, `Email`, `Phone`, `Skills`, `Status`) VALUES
-(4, 'NT027', 'John', 'Lakshmalla', '2006-05-16', 'male', '21 Jump Street', 'Endeavouring Hillings', 'VIC', '3802', '21JumpDaGoat@outlook.com', '0460873256', 'Programming, Database Management, Cloud Computing, Other', 'Current'),
-(5, 'AR001', 'John', 'Lakshmalla', '2006-05-16', 'male', '21 Jump Street', 'Endeavouring Hillings', 'VIC', '3802', '21JumpDaGoat@outlook.com', '0460873256', 'Programming, Data Analysis, Cloud Computing, Other', 'New'),
-(6, 'AR001', 'John', 'Lakshmalla', '2006-05-16', 'male', '21 Jump Street', 'Endeavouring Hillings', 'VIC', '3802', '21JumpDaGoat@outlook.com', '0460873256', 'Programming, Web Development, Cloud Computing, C++, XAMPP', 'New');
 
 -- --------------------------------------------------------
 
@@ -156,7 +147,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `eoi`
 --
 ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `jobs`
