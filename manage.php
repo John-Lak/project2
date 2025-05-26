@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <nav>
     <!-- Navigation links -->
     <a href="index.php">Home</a>
-    <a href="manager.php">Manager Panel</a>
+    <a href="manage.php">Manager Panel</a>
     <a href="logout.php">Logout</a>
 </nav>
 
