@@ -1,50 +1,30 @@
 <?php
-// Load database connection settings
-require_once("settings.php");
+$host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "project_db";  // Make sure this matches your actual database
 
-// Connect to the database
-$conn = mysqli_connect($host, $username, $password, $database);
+$conn = new mysqli($host, $db_user, $db_pass, $db_name);
 
-// Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Get user input
-    $username = trim($_POST["username"]);
-    $password = $_POST["password"];
-
-    // Basic validation for username
-    if (!preg_match("/^[a-zA-Z0-9_]{5,20}$/", $username)) {
-        echo "Username must be 5–20 characters (letters, numbers, underscores).";
-        exit;
-    }
-
-    // Basic validation for password
-    if (strlen($password) < 8 || !preg_match("/\d/", $password)) {
-        echo "Password must be at least 8 characters and include a number.";
-        exit;
-    }
-
-    // Encrypt the password
-    $password_hash = password_hash($password, PASSWORD_DEFAULT);
-
-    // Insert new manager into the database
-    $stmt = $conn->prepare("INSERT INTO managers (username, password_hash) VALUES (?, ?)");
-    $stmt->bind_param("ss", $username, $password_hash);
-
-    // Check if insert was successful
-    if ($stmt->execute()) {
-        echo "Manager registered successfully.";
-    } else {
-        echo "Username already taken.";
-    }
-
-    $stmt->close();
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-?>
 
-<!-- Registration form -->
-<form method="post">
-    <h2>Register Manager</h2>
-    Username: <input type="text" name="username" required><br>
-    Password: <input type="password" name="password" required><br>
-    <button type="submit">Register</button>
-</form>
+$username = 'admin';               // Change as needed
+$password = 'adminsforthewin25';           // Change as needed
+
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+$sql = "INSERT INTO managers (username, password_hash) VALUES (?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $username, $hashed_password);
+
+if ($stmt->execute()) {
+    echo "Manager registered successfully.";
+} else {
+    echo "Error: " . $stmt->error;
+}
+
+$stmt->close();
+$conn->close();
+?>
